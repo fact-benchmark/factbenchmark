@@ -1,0 +1,3 @@
+[submodule "fnn-api"]
+	path = fnn-api
+	url = git@github.com:utunga/fnn-api.git
