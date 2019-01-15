@@ -24,11 +24,11 @@ grid_navigation:
     - title: Manifesto 
       excerpt: Guiding principles
       cta: Read more
-      url: 'manifesto/'
+      url: 'manifesto'
     - title: Documentation 
       excerpt: API documentation
       cta: Read more
-      url: 'documentation/'
+      url: 'documentation'
     - title: Roadmap 
       excerpt: Production road map
       cta: Read more
@@ -36,6 +36,6 @@ grid_navigation:
     - title: Simulations 
       excerpt: Simulations
       cta: Read more
-      url: 'roadmap'
+      url: 'simulations'
 
 ---
