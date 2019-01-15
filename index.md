@@ -4,8 +4,8 @@ layout: homepage
 keywords:
 
 # Hero section
-title: Project name
-description: Project description
+title: "FNN: Realtime Benchmark"
+description: Fake News Network, Real Time Benchmark
 buttons:
     - content: Button
       url: '#'
