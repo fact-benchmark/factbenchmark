@@ -4,15 +4,15 @@ doks:
     color_theme: # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
-            text: 
-            image: true
+            text: "FNN: Realtime Benchmark"
+            image: false
         nav:
-            - item_name: Item 1
-              item_url: '#'
-            - item_name: Item 2
-              item_url: '#'
-            - item_name: Item 3
-              item_url: '#'
+            - item_name: API
+              item_url: 'https://fnn.docs.apiary.io/'
+            - item_name: Docs
+              item_url: '/documentation'
+            - item_name: Manifesto
+              item_url: '/manifesto'
     footer:
         content:
             logo:
