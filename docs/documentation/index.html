@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title></title>
+
+	<meta name="description" content="This API aims to provide an independent third party that can facilitate a collective, shared resource created by and for researchers working in Fake News detection to push the state of the art in realtime semi or fully automated technique.">
+
+
+<link rel="icon" href="/fnn-web/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|Noto+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=latin-ext">
+<link rel="stylesheet" href="/fnn-web/doks-theme/assets/css/style.css">
+
+	</head>
+	<body class="" data-spy="scroll" data-target=".js-scrollspy">
+		
+	<div class="offcanvas visible-xs">
+		<ul class="offcanvas__nav">
+			
+				<li><a href="/fnn-webhttps://fnn.docs.apiary.io/">API</a></li>
+			
+				<li><a href="/fnn-web/documentation">Docs</a></li>
+			
+				<li><a href="/fnn-web/manifesto">Manifesto</a></li>
+			
+		</ul><!-- /.offcanvas__nav -->
+	</div><!-- /.offcanvas -->
+
+
+
+	<header class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					
+						<a href="/fnn-web/" class="site-header__logo">FNN: Realtime Benchmark</a>
+					
+					
+						<ul class="site-header__nav hidden-xs">
+							
+								<li><a href="/fnn-webhttps://fnn.docs.apiary.io/">API</a></li>
+							
+								<li><a href="/fnn-web/documentation">Docs</a></li>
+							
+								<li><a href="/fnn-web/manifesto">Manifesto</a></li>
+							
+						</ul><!-- /.site-header__nav -->
+						<button class="offcanvas-toggle visible-xs">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button><!-- /.offcanvas-toggle -->
+					
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+
+		<div class="hero-subheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								
+								
+									<p class="hero-subheader__desc">This API aims to provide an independent third party that can facilitate a collective, shared resource created by and for researchers working in Fake News detection to push the state of the art in realtime semi or fully automated technique.</p>
+								
+								
+									
+									
+										<a href="/fnn-web/manifesto" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+											Manifesto
+										</a>
+									
+								
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+					
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<h2 id="claim">Claim</h2>
+
+<p>A claim is any short statement with an attribution.</p>
+
+<p>To be interesting for analysis a claim should be 
+falsifiable and of general interest.</p>
+
+<p><strong>‘Falsifiable’ in that:</strong></p>
+<ul>
+  <li>relates to verifiable information</li>
+  <li>is not a prediction about the future</li>
+  <li>is not phrased as a question or inquiry</li>
+  <li>is not a normative statement (“our policy is small business focused”)</li>
+  <li>is phrased in an non-ambiguous way</li>
+</ul>
+
+<p><strong>‘Of general interest’ in that:</strong></p>
+<ul>
+  <li>it relates to an active public discussion (attached to an active rumor)</li>
+  <li>or it has enouigh reach or is often repeated in the public discourse to be important</li>
+  <li>or it is controversial enough to be of importance to a number of people</li>
+</ul>
+
+<p>If a claim has a source url it also requires a capture date, at which the crawler captured the content.</p>
+
+<ul>
+  <li>claim_text: ‘Student arrested for shouting slogans against BJP in Tamil Nadu’ (string)</li>
+  <li>source: <code class="highlighter-rouge">https://twitter.com/anindita_guha/status/1036924232595382273</code> (Url) - uri to source, when available</li>
+  <li>attribution: <code class="highlighter-rouge">https://twitter.com/LKC1965</code> (Attribution Uri) - lowest level identifier of the user/entity to attribute to</li>
+  <li>timestamp: <code class="highlighter-rouge">2018-09-04T04:29:00.000Z</code> (ISODate) - time stamp of original source</li>
+  <li>raw (Contenthash) - hash of raw content (for/from content cache)</li>
+  <li>submitted_by: <code class="highlighter-rouge">faktist216</code> (User)</li>
+  <li>hidden_date (ISODate) - date hidden, if hidden</li>
+</ul>
+
+<h2 id="rumor">Rumor</h2>
+
+<p>Claims and articles are sometimes (but not necessarily) 
+grouped together underneath rumors.</p>
+
+<p>A rumor may or may not be ‘true’, the use of the word simply indicates that it is a matter of interest.</p>
+
+<p>A rumor should relate to an active public discussion (attached to an active rumor).</p>
+
+<p>A rumor always has a preferred claim or article that outlines the gist of the rumor.</p>
+
+<p>A rumor can only have one preferred claim or article at any time.</p>
+
+<p>The ideal claim or article should nicely summarize the key points present in the wider active discussion.</p>
+
+<h2 id="call">Call</h2>
+
+<p>A call is an evaluation as to the veracity of a statement.</p>
+
+<p>This is the primary method by which reputation points are earned in the benchmark.</p>
+
+<p>There are three four ways that a rumor can be responded to:</p>
+<ul>
+  <li>Be classified as simple boolean true or false</li>
+  <li>Be classified as true, to some degree between 0 and 1</li>
+  <li>Decline to rate as not falsfiable or suggest a better phrasing</li>
+  <li>Simply submit arbitrary data against the rumor (which will be indepdently timestamped and preserved for the record)</li>
+</ul>
+
+<p>EXAMPLES</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	call: false,
+	ref: "http://fnrb.io/d2x2zf2c4fn2",
+}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+	call: true,
+	weighting: 0.3,
+	ref: "http://fnrb.io/d2x2zf2c4fn2",
+}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+	ref: "http://fnrb.io/d2x2zf2c4fn2",	
+	data: {
+		schema: "http://fnrb.io/response/v1"
+		decline_to_rate: {
+			reason: "not falsifiable - better options exist"
+			url: "http://ggw/io/rumors/12123/option/1123"
+		}
+	}
+}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ 
+	ref: "http://fnrb.io/d2x2zf2c4fn2",
+	data: {
+		schema: "http://fnrb.io/response/v1"
+		decline_to_rate: {
+			reason: "not falsifiable - statement of opinion"
+		}
+	}
+} 
+</code></pre></div></div>
+
+<h2 id="post">Post</h2>
+
+<p>A post is a longer statement with or without attribution.</p>
+
+<p>To be interesting for analysis a post should be 
+falsifiable and of general interest (in the same way
+as described for claims).</p>
+
+<p>A post is a more general form of a claim.</p>
+
+<p>If it can be captured in a short textual statement with attribution, it should be considered a claim. Otherwise, if it lacks attribution, contains multi-media or requires a longer format, it should be considered a post.</p>
+
+<p>If a post has a url it also requires a capture date, at which the crawler captured the content.</p>
+
+<h2 id="content-cache">Content (cache)</h2>
+
+<p>In order to allow and sharing of associated data in a trust-free way</p>
+
+<p>The mime-type hash-html should be treated in a special way. When retrieving content of this type any references beginning %#hash#% should be dereferenced by recursive requests to this end point to retrieve the associated content.</p>
+
+<ul>
+  <li>hash (string)</li>
+  <li>data (string)</li>
+  <li>mime-type (string)</li>
+  <li>timestamp_captured (ISODate)</li>
+  <li>submitted_by (User)</li>
+  <li>signature (string)</li>
+</ul>
+
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"></div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		
+		<div class="js-footer-area">
+			
+				<nav class="page-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+								
+									<a href="/fnn-web/manifesto" class="page-nav__item page-nav__item--next">
+										Manifesto
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+				<div class="micro-nav">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="/fnn-web/" class="micro-nav__back">
+					<i class="icon icon--arrow-left"></i>
+					Back to homepage
+				</a><!-- /.micro-nav__back -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.micro-nav -->
+
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="/fnn-web/" class="site-footer__logo">
+							<img src="/fnn-web/doks-theme/assets/images/layout/logo-footer.png">
+						</a><!-- /.site-footer__logo -->
+					
+					
+						<hr>
+						<p class="site-footer__copyright">FNN: Realtime Benchmark</p>
+					
+				</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="/fnn-web/doks-theme/assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/fnn-web/doks-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/fnn-web/doks-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/fnn-web/doks-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/fnn-web/doks-theme/assets/js/scripts.min.js"></script>
+
+
+
+
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>
