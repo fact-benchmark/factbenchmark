@@ -19,7 +19,7 @@ Thumbs.db
 # Compiled assets
 # ---------------
 .sass-cache
-_site
+#_site
 
 logs
 *.log
