@@ -6,13 +6,12 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0">
 <title></title>
 
-	<meta name="description" content="This API aims to provide an independent third party that can facilitate a collective, shared resource created by and for researchers working in Fake News detection to push the state of the art in realtime semi or fully automated technique.">
-
 
 <link rel="icon" href="/fnn-web//favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|Noto+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=latin-ext">
 <link rel="stylesheet" href="/fnn-web//doks-theme/assets/css/style.css">
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="/fnn-web//doks-theme/assets/micon_nb/css/micon_nb.min.css">
 	</head>
 	<body class="" data-spy="scroll" data-target=".js-scrollspy">
 		
@@ -35,7 +34,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					
-						<a href="/fnn-web//" class="site-header__logo">FNN: Realtime Benchmark</a>
+						<a href="/fnn-web//" class="site-header__logo">Fact Benchmark</a>
 					
 					
 						<ul class="site-header__nav hidden-xs">
@@ -67,8 +66,6 @@
 							<div class="align-inner">
 								
 								
-									<p class="hero-subheader__desc">This API aims to provide an independent third party that can facilitate a collective, shared resource created by and for researchers working in Fake News detection to push the state of the art in realtime semi or fully automated technique.</p>
-								
 								
 									
 									
@@ -90,14 +87,16 @@
 				<div class="row">
 					<div class="col-md-7">
 						<div class="content">
-							<h2 id="claim">Claim</h2>
+							<h1 id="fact-benchmark-api-v05">Fact Benchmark API (v0.5)</h1>
 
-<p>A claim is any short statement with an attribution.</p>
+<p>This API aims to provide an independent, collective, shared resource by which researchers working in the field can colllaborate to push the state of the art in realtime factcheck detection.</p>
 
-<p>To be interesting for analysis a claim should be 
+<h2 id="claim">Claim</h2>
+
+<p>A claim is a short statement which should be 
 falsifiable and of general interest.</p>
 
-<p><strong>‘Falsifiable’ in that:</strong></p>
+<p><strong>Claims should be ‘falsifiable’ in that:</strong></p>
 <ul>
   <li>relates to verifiable information</li>
   <li>is not a prediction about the future</li>
@@ -106,7 +105,7 @@ falsifiable and of general interest.</p>
   <li>is phrased in an non-ambiguous way</li>
 </ul>
 
-<p><strong>‘Of general interest’ in that:</strong></p>
+<p><strong>Claims should be ‘of general interest’ in that:</strong></p>
 <ul>
   <li>it relates to an active public discussion (attached to an active rumor)</li>
   <li>or it has enouigh reach or is often repeated in the public discourse to be important</li>
@@ -114,6 +113,10 @@ falsifiable and of general interest.</p>
 </ul>
 
 <p>If a claim has a source url it also requires a capture date, at which the crawler captured the content.</p>
+
+<p>with an attribution.</p>
+
+<p>To be interesting for analysis a claim</p>
 
 <ul>
   <li>claim_text: ‘Student arrested for shouting slogans against BJP in Tamil Nadu’ (string)</li>
@@ -276,7 +279,7 @@ as described for claims).</p>
 					
 					
 						<hr>
-						<p class="site-footer__copyright">FNN: Realtime Benchmark</p>
+						<p class="site-footer__copyright">Factcheck Benchmark</p>
 					
 				</div><!-- /.col -->
 				
