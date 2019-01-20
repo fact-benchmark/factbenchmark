@@ -25,13 +25,13 @@ author:
 features:
     - title: Find check-worthy claims 
       icon-class: fab fa-searchengin
-      excerpt: Be the first to detect falsifiable, check-worthy claims or rumors of interest to the public.
+      excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the public.
     - title: Estimate validity
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, technology or process you choose. 
-    - title: Earn reputation
+    - title: Realtime benchmark
       icon-class: mi mi-Settings mi-spin
-      excerpt: Benchmark your system in real time by making correct, early, estimates of the future <a href="../measuring_truth">consensus.</a>  
+      excerpt: Earn reputation for your system by making correct, early, estimates of the future <a href="../measuring_truth">consensus.</a>  
 
    
 
@@ -41,18 +41,22 @@ grid_navigation:
       excerpt: Our guiding principles
       cta: Read more
       url: 'manifesto'
-    - title: API Documentation 
-      excerpt: Documentation (version 0.5)
-      cta: Read more
-      url: 'documentation'
     - title: Measuring truth 
       excerpt: Our practical approach to factuality
       cta: Read more
       url: 'measuring_truth'
+    - title: API Documentation 
+      excerpt: Documentation (version 0.5)
+      cta: Read more
+      url: 'documentation'
     - title: Simulations 
       excerpt: Simulating aggregate stability
       cta: Read more
-      url: 'simulations'      
+      url: 'simulations'
+    - title: Members 
+      excerpt: Founding member organisations
+      cta: Read more
+      url: 'founders'
     - title: Roadmap 
       excerpt: Our development road map
       cta: Read more
