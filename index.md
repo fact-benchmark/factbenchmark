@@ -6,7 +6,7 @@ keywords:
 # Hero section
 
 title: Fact Benchmark 
-sub_title: An ongoing, real time, kaggle-like benchmark.
+sub_title: An ongoing, kaggle-like benchmark for real-time detection of fake news.
 description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumour from fact.
 
 buttons:
@@ -25,7 +25,7 @@ author:
 features:
     - title: Find check-worthy claims 
       icon-class: fab fa-searchengin
-      excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the public.
+      excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the general public.
     - title: Estimate validity
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, technology or process you choose. 

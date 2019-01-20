@@ -95,6 +95,15 @@
 }
 
 
-.author .align-container {
-  padding-top: 2.4rem;
+.author {
+  .align-container {
+    padding-top: 2.4rem;
+    font-size: 1.4rem;
+  }
+  .hero-subheader__author-title {
+     font-size: 2rem;
+     &:hover {
+        text-decoration: underline;
+     }
+  }
 }
