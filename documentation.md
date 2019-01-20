@@ -4,10 +4,6 @@ layout: default
 keywords:
 comments: true
 
-# Hero section
-description:  This API aims to provide an independent third party that can facilitate a collective, shared resource created by and for researchers working in Fake News detection to push the state of the art in realtime semi or fully automated technique.
-
-
 # Micro navigation
 micro_nav: true
 
@@ -20,27 +16,32 @@ page_nav:
 
 
 
+# Fact Benchmark API (v0.5)
+
+This API aims to provide an independent, collective, shared resource by which researchers working in the field can colllaborate to push the state of the art in realtime factcheck detection.
 
 ## Claim 
 
-A claim is any short statement with an attribution.
-
-To be interesting for analysis a claim should be 
+A claim is a short statement which should be 
 falsifiable and of general interest.
 
-**'Falsifiable' in that:**
+**Claims should be 'falsifiable' in that:**
 * relates to verifiable information 
 * is not a prediction about the future
 * is not phrased as a question or inquiry
 * is not a normative statement ("our policy is small business focused")
 * is phrased in an non-ambiguous way
 
-**'Of general interest' in that:**
+**Claims should be 'of general interest' in that:**
 * it relates to an active public discussion (attached to an active rumor)
 * or it has enouigh reach or is often repeated in the public discourse to be important
 * or it is controversial enough to be of importance to a number of people
 
 If a claim has a source url it also requires a capture date, at which the crawler captured the content. 
+
+with an attribution.
+
+To be interesting for analysis a claim 
 
 + claim_text: 'Student arrested for shouting slogans against BJP in Tamil Nadu' (string)
 + source: `https://twitter.com/anindita_guha/status/1036924232595382273` (Url) - uri to source, when available

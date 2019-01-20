@@ -6,22 +6,25 @@ comments: true
 
 # Hero section
 title: Manifesto
-description: The objective of the FNN Real Time Benchmark is to support and encourage quality research into the rapid detection and discernment of rumours and falsity (fake news) from well supported breaking news.
+description: 
 
 # Micro navigation
 micro_nav: true
 
 # Page navigation
 page_nav:
-    prev:
+    next:
         content: Documentation
         url: '/documentation'
-    next:
-        content: Simulation
-        url: '/simulation'
+
 ---
 
+# Manifesto
 
+
+## Objective
+
+The objective of the Fact Benchmark is to support and encourage quality research into the rapid detection and discernment of rumours and falsity (fake news) from well supported breaking news.
 
 ## Guiding Princples
 Given the objective the following guiding principles are agreed
