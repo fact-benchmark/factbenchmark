@@ -11,7 +11,7 @@ description: We aim to provide an independent benchmark that can support and enc
 
 buttons:
     - content: Try it out 
-      url: 'https://fnn.docs.apiary.io/'
+      url: 'https://factbench-api.now.sh/'
       icon: arrow-right
       external_url: true
 
