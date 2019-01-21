@@ -18,10 +18,15 @@ page_nav:
 ---
 
 
-
 # Fact Benchmark API (v0.5)
 
 This API aims to provide an independent, collective, shared resource by which researchers working in the field can colllaborate to push the state of the art in realtime factcheck detection.
+
+## Inviting feedback
+
+This API is currently a work in progress. Given our desire to support and facilitate the development of research in this space we are currently inviting and would appreciate feedback from our member organisatinos on points major or minor.
+
+We invite your feedback on this api at feedback@factbenchmark.org
 
 ## Claim 
 
