@@ -10,7 +10,7 @@ micro_nav: true
 # Hero section
 
 title: API Documentation (v0.5)
-description: This API aims to provide an independent, collective, shared resource by which researchers working in the field can colllaborate to push the state of the art in realtime factcheck detection.
+description: This API aims to provide an independent, collective, shared resource by which researchers working in the field can collaborate to push the state of the art in realtime factcheck detection.
 
 # Page navigation
 page_nav:
@@ -25,7 +25,7 @@ page_nav:
 
 # Fact Benchmark API (v0.5)
 
-This API aims to provide an independent, collective, shared resource by which researchers working in the field can colllaborate to push the state of the art in realtime factcheck detection.
+This API aims to provide an independent, collective, shared resource by which researchers working in the field can collaborate to push the state of the art in realtime factcheck detection.
 
 ## Inviting feedback
 
@@ -77,7 +77,7 @@ Example (with some expansion)
 
 In this version of the benchmark check-worthy claims are submitted by members and then, also, evaluated by members.
 
-The first step is to decide whether a claim is check-worthy, then to evaluate it's truth or falsehood. 
+The first step is to decide whether a claim is check-worthy, then to evaluate its truth or falsehood. 
 
 <img src="../theme/assets/images/claim_lifecycle.png" align="right" width="60%">
 
@@ -353,7 +353,7 @@ Special handling is used for hidden responses, when dealing with computation of 
 
 ## Future directions 
 
-After the first round of feedback we have attempted to simplify our API to the bare essentials. There are, however, som features we would like to build back in when we can. 
+After the first round of feedback we have attempted to simplify our API to the bare essentials. There are, however, some features we would like to build back in when we can. 
 
 ### Mixed media and longer form 'claims' 
 

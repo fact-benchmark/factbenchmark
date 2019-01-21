@@ -24,7 +24,7 @@ Name change
 
 KISS changes to API
 
-+ Lose Rumours and Posts for now
++ Lose Rumors and Posts for now
 + Split the checkworthy claim submit step/s from the Evaluation step
 + Make it so all the operations we do are the same as end user steps (just more reputation)
 + Benchmarks can be a separate thing, added after the fact
@@ -38,7 +38,7 @@ For the documentation
 + Be explicit about the timedelay (24 hrs) ?
 
 Expand the Roadmap
-+ Post and rumour should be on the roadmap
++ Post and rumor should be on the roadmap
 + Claims = providing evidence for why it is check worthy - in two categories - who said it or that lots of people are saying it? 
  
 
