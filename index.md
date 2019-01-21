@@ -5,7 +5,7 @@ keywords:
 
 # Hero section
 
-title: Facty Benchmark 
+title: Fact Benchmark 
 sub_title: An ongoing, kaggle-like benchmark for real-time detection of fake news.
 description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumour from fact.
 
@@ -42,23 +42,23 @@ grid_navigation:
       cta: Read more
       url: 'manifesto'
     - title: Measuring truth 
-      excerpt: Our practical approach to factuality
+      excerpt: Our practical, bayesian approach
       cta: Read more
       url: 'measuring_truth'
     - title: API Documentation 
       excerpt: Documentation (version 0.5)
       cta: Read more
       url: 'documentation'
-    - title: Simulations 
-      excerpt: Simulating aggregate stability
+    - title: Leaderboard 
+      excerpt: Real-time rankings
       cta: Read more
       url: 'simulations'
     - title: Members 
       excerpt: Founding member organisations
       cta: Read more
       url: 'founders'
-    - title: Roadmap 
-      excerpt: Our development road map
+    - title: Dev Roadmap 
+      excerpt: Development road map
       cta: Read more
       url: 'roadmap'
 
