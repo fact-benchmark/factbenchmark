@@ -287,6 +287,7 @@ It is also possible to request that content be retrieved by the server, timestam
 	"hash": "a2f12df5",
 	"mime-type": "text/html",
 	"data": {"..."},
+	"source_url": "https://twitter.com/anindita-guha/status/1036924232595382273",
 	"timestamp-captured": "2019-01-01T01:02:00.000Z",
 	"signature": "d76a0ee281f84e08b04f73670122f4c9",
 	"submitted-by": { "href": "agent/joef2016"},
