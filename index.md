@@ -18,7 +18,7 @@ buttons:
 # Author box
 author:
     title: About us 
-    title_url: '/about'
+    title_url: 'about'
     external_url: false
     description: Who we are
 
