@@ -14,8 +14,8 @@ micro_nav: true
 # Page navigation
 page_nav:
     next:
-        content: Documentation
-        url: '/documentation'
+        content: Measuring Truth
+        url: '/measuring_truth'
 
 ---
 

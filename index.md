@@ -28,7 +28,7 @@ features:
       excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the general public.
     - title: Estimate validity
       icon-class: fas fa-balance-scale
-      excerpt: Estimate the validity of claims or rumours using any data, technology or process you choose. 
+      excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
     - title: Realtime benchmark
       icon-class: mi mi-Settings mi-spin
       excerpt: Earn reputation for your system by making correct, early, estimates of the future <a href="../measuring_truth">consensus.</a>  
@@ -49,18 +49,28 @@ grid_navigation:
       excerpt: Documentation (version 0.5)
       cta: Read more
       url: 'documentation'
-    - title: Leaderboard 
-      excerpt: Real-time rankings
-      cta: Read more
-      url: 'simulations'
     - title: Members 
       excerpt: Founding member organisations
       cta: Read more
-      url: 'founders'
+      url: 'members'
+    - title: Simulations 
+      excerpt: Simulations exploring stability
+      cta: Read more
+      url: 'founders'   
     - title: Dev Roadmap 
       excerpt: Development road map
       cta: Read more
       url: 'roadmap'
 
-
+# Live navigation
+live_navigation:
+    - title: Latest Submissions
+      excerpt: "/r/all for submitted claims"
+      url: '#'
+    - title: Checkworthy Claims 
+      excerpt: Active, check-worthy claims
+      url: '#'
+    - title: Leaderboard 
+      excerpt: Real-time rankings
+      url: '#'
 ---

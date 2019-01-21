@@ -9,9 +9,12 @@ micro_nav: true
 
 # Page navigation
 page_nav:
+    prev:
+        content: Measuring Truth
+        url: '/measuring_truth'
     next:
-        content: Manifesto
-        url: '/manifesto'
+        content: Members
+        url: '/members'
 ---
 
 
