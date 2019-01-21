@@ -9,9 +9,9 @@ doks:
             image: false
         nav:
             - item_name: Docs
-              item_url: '../documentation'
+              item_url: 'documentation'
             - item_name: Manifesto
-              item_url: '../manifesto'
+              item_url: 'manifesto'
     footer:
         content:
             logo:
