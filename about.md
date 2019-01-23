@@ -9,7 +9,7 @@ micro_nav: true
 
 # Hero section
 title: About us
-description: Fact Benchmark was founded by <b>w4gl</b>, an organisation doing research into resilient coordination protocols in distributed, unreliable environments.
+description: Fact Benchmark is an independent non profit foundation spin off initially founded by <b>w4gl</b> - as an organisation doing research into resilient coordination protocols in distributed, unreliable environments.
 
 
 ---
