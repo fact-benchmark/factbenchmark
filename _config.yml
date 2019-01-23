@@ -1,7 +1,7 @@
 # Theme settings
 api_url: https://factbench-api.now.sh
 doks:
-    baseurl: /
+    baseurl: ""
     color_theme: # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
