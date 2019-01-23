@@ -32,4 +32,7 @@ At any time the consensus estimate for truth is a probability weighted aggregate
 
 Reputations have been seed-weighted towards organisations that perform actual journalism and research. 
 
-## Claims that don't reach consensus.
+### Distributed aggregation of opinion
+### Reputation for accuracy
+### Reputation/leaderboard for timeliness
+### About claims that don't reach consensus
