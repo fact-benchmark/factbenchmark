@@ -6,13 +6,16 @@ comments: true
 
 # Hero section
 title: Manifesto
-description: 
+description: The objective of the Fact Benchmark is to support and encourage quality research. Our guiding principles support this objective by very clearly outlining our commitment to open data, transparency and objectivity.
 
 # Micro navigation
 micro_nav: true
 
 # Page navigation
 page_nav:
+    prev:
+        content: Home
+        url: '/' 
     next:
         content: Measuring Truth
         url: '/measuring_truth'

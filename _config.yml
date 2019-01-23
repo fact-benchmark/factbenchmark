@@ -1,7 +1,7 @@
 # Theme settings
 api_url: https://factbench-api.now.sh
 doks:
-    baseurl: 
+    baseurl: /
     color_theme: # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
@@ -9,9 +9,9 @@ doks:
             image: false
         nav:
             - item_name: Docs
-              item_url: '/documentation'
+              item_url: 'documentation'
             - item_name: Manifesto
-              item_url: '/manifesto'
+              item_url: 'manifesto'
     footer:
         content:
             logo:
