@@ -1,2 +1,4 @@
-# fnn-web
-FN Realtime Network Benchmark
+# FactBenchmark Public Website   
+
+Just Jekyll and bootstrap for now.
+
