@@ -1,0 +1,49 @@
+
+Definition of terms:
+
+- Agent. Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactbenchMark itself has it's own agent, so that data entered by ourselves is clearly marked as such. 
+
+- Claims. Our name for statements or rumours or quotes that are being evaluated for veracity (and check worthiness) by the agents.
+
+- Check worthy. The requirements for a claim to be check worthy, are that it is "falsifiable" and "of general interest" as outlined in more detail on the <a href="/documentation/">documentation</a> page.
+
+- Validity. Check worthy claims are evaluated by agents for veracity - they are either 'true', 'false', or 'mixed' as outlined in more detail on the <a href="/documentation/">documentation</a> page. A claim may also be not yet evaluated, not check worthy, or of indeterminate veracity.
+
+
+Claim lifecycle 
+
+A claim goes through various stages as it moves through the benchmark. By outlining the lifecycle here, we also get a good idea of how the system works.
+
+It should be noted that while it is the intention of this benchmark to allow or even encourage the automation of many of these steps, some of these steps require a degree of human curation and judgement by independent individuals with appropriate skills. Where needed during the trial, "Fact Benchmark is commited to provide sufficient human resourcing to make this possible.
+
+The steps of the processing are as follows:
+
+1. Discovery. It is expected that claims will generally be 'found in the wild'.  This may involve detecting a spike of social media activity around a particular rumour and finding a representative tweet for that rumour. Or it may involve parsing a speech from a prominent figure and finding check worthy claims that they make. We expect almost all claims to have one or more supporting sources listed in their 'evidence' by way of reaching the threshold for 'general interest'.
+
+2. Phrasing. Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of it's source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsfiability'.
+
+3. Submission. Any agent can submit a claim for review at any time. To ensure a sufficient number of check worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the Factbenchmark agent.
+
+4. Evaluation for "check worthiness". 
+
+Agents can post 'responses' to claims at any time. Responses can include the following sections:
+- 'check-worthy' (or 'decline to rate', or 'better options exist')
+- 'truth-rating' (actual estimate of truth rating, see below)
+- 'annotation' (other annotations)
+
+A "decline to evaluate" response because the agent doesn't believe the claim has sufficient falsifiability or general interest, or because they believe the claim is otherwise poorly formed. Agents may provide reasons as to why claims will not be rated, but this is not essential. Reasons may be useful feedack, and useful for reports and analysis, however. 
+
+5. Evaluation for "duplication"
+
+5. Threshold for benchmarks. In order to avoid unnecessary use of resources by agents, claims will generally not be added to a benchmark until they reach a threshold for estimated check worthiness (or more specifically, maximum likelihood "importance", per the model).
+
+6. During the trial phase 
+
+7. Evaluation for validity. Argument for simplicity of model. Meaning of "truthiness" between 0 and 1.
+
+
+
+We have designed the api to have CRDT capable data types and to work ina. primarily decentralize or decentralizable way. Ask whether would be interested in a block chain type solution for this. 
+
+
+Immutable, non-revokable, timestamped, independently verifiable, trustless.
