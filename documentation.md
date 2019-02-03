@@ -15,11 +15,11 @@ description: This API aims to provide an independent, collective, shared resourc
 # Page navigation
 page_nav:
     prev:
-        content: Measuring Truth
-        url: '/measuring_truth'
+        content: Modeling Truthiness
+        url: '/model'
     next:
-        content: Members
-        url: '/members'
+        content: Roadmap
+        url: '/roadmap'
 ---
 
 

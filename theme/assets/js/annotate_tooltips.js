@@ -1,8 +1,8 @@
 
 var tooltip_message = "We are currently seeking feedback from our partners. Please highlight text and click annotate to add yours.";
-var tooltip_selector = "p";
+var tooltip_selector = ".intro-content p, .content p, .content li";
 var total_show_count = 0;
-var max_show_count = 30;
+var max_show_count = 50;
 
 ( function( $, win) {
 	'use strict';

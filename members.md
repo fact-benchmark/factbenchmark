@@ -14,11 +14,11 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: API Documentation
-        url: '/documentation'
+        content: Roadmap
+        url: '/roadmap'
     next:
-        content: Model Simulation
-        url: '/models'
+        content: Manifesto
+        url: '/manifesto'
 
 ---
 

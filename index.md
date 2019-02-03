@@ -10,10 +10,10 @@ sub_title: An ongoing, kaggle-like benchmark for real-time detection of fake new
 description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumour from fact.
 
 buttons:
-    - content: Try it out 
-      url: 'https://factbench-api.now.sh/'
+    - content: How it works
+      url: '/how'
       icon: arrow-right
-      external_url: true
+      external_url: false
 
 # Author box
 author:
@@ -30,37 +30,49 @@ features:
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
     - title: Realtime benchmark
-      icon-class: mi mi-Settings
+      icon-class: mi mi-Settings fact-spinner
       excerpt: Earn reputation for your system by making correct, early, estimates of the future <a href="../measuring_truth">consensus.</a>  
 
    
 
+
 # Grid navigation
 grid_navigation:
-    - title: Manifesto
-      excerpt: Our guiding principles
+
+    - title: How it works
+      excerpt: What the Realtime Fact Benchmark is and how it works
       cta: Read more
-      url: 'manifesto'
-    - title: Measuring truth 
+      url: 'how' 
+
+    - title: Alpha trial 
+      excerpt: Be part of our alpha trial
+      cta: Read more
+      url: 'trial' 
+
+    - title: Modeling truthiness
       excerpt: Our practical, bayesian approach
       cta: Read more
-      url: 'measuring_truth'
-    - title: API Documentation 
-      excerpt: Documentation (version 0.5)
+      url: 'model' 
+
+    - title: Documentation 
+      excerpt: API documentation (narrative form)
       cta: Read more
-      url: 'documentation'
-    - title: Members 
-      excerpt: Founding member organisations
+      url: 'documentation' 
+
+    - title: Roadmap
+      excerpt: Our development roadmap
       cta: Read more
-      url: 'members'
-    - title: Simulations 
-      excerpt: Simulations exploring stability
+      url: 'roadmap' 
+
+    - title: Members
+      excerpt: Our founding member organisations
       cta: Read more
-      url: 'founders'   
-    - title: Dev Roadmap 
-      excerpt: Development road map
+      url: 'members' 
+
+    - title: Data Manifesto
+      excerpt: Our guiding principles
       cta: Read more
-      url: 'roadmap'
+      url: 'manifesto' 
 
 # Live navigation
 live_navigation:

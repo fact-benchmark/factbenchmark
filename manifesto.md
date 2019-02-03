@@ -14,11 +14,11 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
+        content: Members
+        url: '/members' 
+    next:
         content: Home
         url: '/' 
-    next:
-        content: Measuring Truth
-        url: '/measuring_truth'
 
 ---
 
