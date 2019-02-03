@@ -144,6 +144,21 @@ div.live_navigation {
   }
 }
 
+div.section .content {
+  a {
+    font-weight: bold;
+    color: $color-dark-blue;
+    text-decoration: none;
+    border: none;
+    
+    &:hover {
+      text-decoration: none;
+      border-bottom: .0625em solid;
+      border-color: inherit;
+      padding-bottom: .125em;
+    }
+  }
+}
 
 
 
