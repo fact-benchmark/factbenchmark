@@ -30,7 +30,7 @@ features:
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
     - title: Realtime benchmark
-      icon-class: mi mi-Settings mi-spin
+      icon-class: mi mi-Settings
       excerpt: Earn reputation for your system by making correct, early, estimates of the future <a href="../measuring_truth">consensus.</a>  
 
    

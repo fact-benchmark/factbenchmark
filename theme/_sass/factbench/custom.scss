@@ -49,6 +49,11 @@
           }
         }
       }
+
+      .fact-spinner {
+        -webkit-animation: mi-spin 4s infinite linear;
+        animation: mi-spin 4s infinite linear;
+      }
     }
   }
 }
@@ -139,3 +144,6 @@ div.live_navigation {
   }
 
 }
+
+
+
