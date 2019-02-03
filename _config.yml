@@ -5,7 +5,7 @@ doks:
     color_theme: # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
-            text: Fact Benchmark
+            text: Realtime Fact Benchmark
             image: false
         nav:
             - item_name: Docs
@@ -17,7 +17,7 @@ doks:
             logo:
                 text: 
                 image: true
-            copyright: "Factcheck Benchmark"
+            copyright: "Fact Benchmark"
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
