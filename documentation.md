@@ -9,8 +9,8 @@ micro_nav: true
 
 # Hero section
 
-title: API Documentation (v0.5)
-description: This API aims to provide an independent, collective, shared resource by which researchers working in the field can collaborate to push the state of the art in realtime factcheck detection.
+title: API Documentation (WIP)
+description: The API aims to provide access to an independent, collective, shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime factchecking.
 
 # Page navigation
 page_nav:
@@ -25,28 +25,62 @@ page_nav:
 
 # Fact Benchmark API (v0.5)
 
-This API aims to provide an independent, collective, shared resource by which researchers working in the field can collaborate to push the state of the art in realtime factcheck detection.
+## Intro
+
+The API aims to provide access to a shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime factchecking.
+
+As a design goal, where-ever possible the data available via the API is designed to be immutable, non-revokable, timestamped, independently verifiable (signed) and trustless. This design constraint supports our future design goals as well as our data transparency objectives.
+
+There are four aspects to the API.
+
+### A simple REST API for read and create operations
+
+A REST endpoint allows agents to create (```POST```) resources and retrieve (```GET```) resources by id or hash. The following resources are available (as explained in more detail below):
+ - claims
+ - responses
+ - annotations
+ - benchmarks
+ - content
+ - revokes
+ - agents
+
+With the exception of the agents end point, update operations are not supported with this API because all operations are designed to be CRDT. However the revoke end point provides a mechanism where by agents (including factbenchmark.org itself) can post  'hide' flags. Operations on the REST API do not honour 'hide' flags but other API operations may. 
+
+The REST API does not provide documented read query semantics because the GraphQL API provides better support for query based use cases.
+
+### GraphQL Query API
+
+A GraphQL end point provides clean semantics for read query operations such as search and aggregation.
+
+### Notifications, Websockets API 
+
+A websockets API provides notifications of new content matching specific queries, including:
+- claims {all, by_agent, checkworthy&gt;x, truthiness&gt;x, truthiness&lt;x, accepted_by_benchmark}
+- responses {all, by_agent, by_claim, related_to_benchmark}
+- annotations{all, by_agent, for_claim}
+
+### Bulk Feed API
+
+This is a read only end point that provides access to data in flattened format for bulk download and analysis purposes. We wish to be guided by our members as to the necessity and preferred format for this end point.
 
 ## Inviting feedback
 
-This API is currently a work in progress. Given our desire to support and facilitate the development of research in this space we are currently inviting and would appreciate feedback from our member organisations on points major or minor.
+We are currently seeking feedback on many aspects of this project but especially the design of this API. Given our desire to support and facilitate research in this areas we would appreciate feedback from our member organisations on points major or minor. We are doing this via the hypothesis.is annotation tool. If you have thoughts about any aspects of this site please feel free to select any text on this page and use the tool to add your comments. Alternativelly feedback can be provided by email to: feedback@factbenchmark.org
 
-We invite your feedback on this api at feedback@factbenchmark.org
-
-## Resources 
+## REST API
 
 ### Claim 
 
 A claim is a short statement which should be falsifiable and of general interest (important).
 
-**A claim should, ideally, be 'falsifiable' in that it:**
+**To be regarded as check worthy a claim should be 'falsifiable', in that it:**
 * is phrased in an non-ambiguous way
 * is not a prediction about the future
 * relates to (potentially) verifiable information 
 * is not phrased as a question or inquiry
 * is not a normative statement ("our policy is small business focused")
 
-**Claims should, ideally, be 'of general interest' due to one or more of the following reasons:**
+**To be regarded as check worthy a claim should also be 'of general interest' due to one or more of the following reasons:**
 * it relates to a generally active public discussion or rumor .. or ..
 * it is attributed to an important person of interest .. or ..
 * it is otherwise important enough to be of importance to a number of people
