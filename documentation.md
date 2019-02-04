@@ -31,7 +31,7 @@ The API aims to provide access to a shared data resource whereby researchers wor
 
 As a design goal, where-ever possible the data available via the API is designed to be immutable, non-revokable, timestamped, independently verifiable (signed) and trustless. This design constraint supports our future design goals as well as our data transparency objectives.
 
-There are four aspects to the API.
+There are three aspects to the API.
 
 ### A simple REST API for read and create operations
 
@@ -46,22 +46,22 @@ A REST endpoint allows agents to create (```POST```) resources and retrieve (```
 
 With the exception of the agents end point, update operations are not supported with this API because all operations are designed to be CRDT. However the revoke end point provides a mechanism where by agents (including factbenchmark.org itself) can post  'hide' flags. Operations on the REST API do not honour 'hide' flags but other API operations may. 
 
-The REST API does not provide documented read query semantics because the GraphQL API provides better support for query based use cases.
+The REST API does not provide documented complex query semantics because the GraphQL API provides better support for query based use cases.
 
-### GraphQL Query API
+### GraphQL Query API for complex queries and notification
 
 A GraphQL end point provides clean semantics for read query operations such as search and aggregation.
 
-### Notifications, Websockets API 
+A self-documenting example of the GraphQL API is available <a href="https://us1.prisma.sh/miles-thompson-761e5b/factapi/dev">here</a>
 
-A websockets API provides notifications of new content matching specific queries, including:
+The GraphQL end point also provides notifications via subscriptions including:
 - claims {all, by_agent, checkworthy&gt;x, truthiness&gt;x, truthiness&lt;x, accepted_by_benchmark}
 - responses {all, by_agent, by_claim, related_to_benchmark}
 - annotations{all, by_agent, for_claim}
 
 ### Bulk Feed API
 
-This is a read only end point that provides access to data in flattened format for bulk download and analysis purposes. We wish to be guided by our members as to the necessity and preferred format for this end point.
+Finally, there is a read only end point that provides access to data in flattened format for bulk download and analysis purposes. We wish to be guided by our members as to the necessity and preferred format for this end point.
 
 ## Inviting feedback
 
@@ -85,33 +85,37 @@ A claim is a short statement which should be falsifiable and of general interest
 * it is attributed to an important person of interest .. or ..
 * it is otherwise important enough to be of importance to a number of people
 
-The ```claim-text``` is the definitive text that should be evaluated for truth or falsity. It doesn't *necessarily* exactly match the text from the source (if any), but should be close to it. 
+The ```claim_text``` is the definitive text that should be evaluated for truth or falsity. It doesn't *necessarily* exactly match the text from the source (if any), but should be close to it. 
 
 The ```timestamp``` is the time of attribution to the original claim (if any) 
 
-The ```attribution``` is a URI, being the username of the person who made the claim. In the case of well known individuals it is acceptable to use a wikipedia url. *Is there a better way to do this?*
 
-Example (with some expansion)
+Example (with expansion of the evidence/attribution)
 ```json
 {
-	"claim-text": "Student arrested for shouting slogans against BJP in Tamil Nadu",
-	"timestamp": "2018-09-04T04:29:00.000Z",
-	"attribution": "https://twitter.com/LKC1965",
-	"evidence": [{
-	  "source-url": "https://twitter.com/anindita-guha/status/1036924232595382273",
-	  "snapshot": { "hash": "3d8c26e642e3b" }
-	}],
-	"submitted-by": { "href": "agent/faktist16"},
-	"created": "2019-01-01T01:23:00.000Z",
-	"self": { "href": "claim/5355b6c6-b620-411b-9eb5-7e73f7146cbf"}
+	"self": { "href": "claim/5355b6c6-b620-411b-9eb5-7e73f7146cbf"},
+	"claim_text": "Student arrested for shouting slogans against BJP in Tamil Nadu",
+	"claim_timestamp": "2018-09-04T04:29:00.000Z",
+	"evidence": {
+		"attributions": [
+			{ "source-url": "https://twitter.com/anindita-guha/status/1036924232595382273",
+	  		  "snapshot": { "hash": "3d8c26e642e3b" },
+	  		  "submitted_by": { "href": "agent/faktist16"},
+			  "created": "2019-01-01T01:23:00.000Z"
+	  		}
+		],
+	},
+	"submitted_by": { "href": "agent/faktist16"},
+	"created": "2019-01-01T01:23:00.000Z"
 }
 ```
 
+	
 ### Claim-Response 
 
-In this version of the benchmark check-worthy claims are submitted by members and then, also, evaluated by members.
+In this version of the benchmark check_worthy claims are submitted by members and then, also, evaluated by members.
 
-The first step is to decide whether a claim is check-worthy, then to evaluate its truth or falsehood. 
+The first step is to decide whether a claim is check_worthy, then to evaluate its truth or falsehood. 
 
 <img src="../theme/assets/images/claim_lifecycle.png" align="right" width="60%">
 
@@ -119,34 +123,34 @@ It is expected, but not required, that a claim will tend to be evaluated for che
 
 There are three parts of a claim response, any of which can be provided at any time.
 
-- ```check-worthy``` is a section indicating whether or not the claim is check-worthy.
-- ```truth-rating``` is a section indicating whether the claim is true, false, or partially true.
+- ```check_worthy``` is a section indicating whether or not the claim is check_worthy.
+- ```truth_rating``` is a section indicating whether the claim is true, false, or partially true.
 - ```annotation``` is a section for arbitrary data.
 
 A given user can respond multiple times to the same claim (and often will).
 
-Submitting a claim (or providing a truth-rating without a check-worthy section) is taken to be implcit acknowledgement that the claim is check-worthy (equivalent to ```"check-worthy": {"importance":1}```).
+Submitting a claim (or providing a truth_rating without a check_worthy section) is taken to be implcit acknowledgement that the claim is check_worthy (equivalent to ```"check_worthy": {"importance":1}```).
 
 #### Check-worthy
 
-The simplest way to respond to a claim is to simply post ```"check-worthy": {"importance":1}``` - which is essentially the same as saying ```"check-worthy": true```.
+The simplest way to respond to a claim is to simply post ```"check_worthy": {"importance":1}``` - which is essentially the same as saying ```"check_worthy": true```.
 
 For example:
 
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },
-	"check-worthy": { "importance": 1},
-	"submitted-by": { "href": "agent/joef2016"},
+	"check_worthy": { "importance": 1},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
 
-The ```importance``` indicates the degree to which the claim is, in fact, "check-worthy". If it summarizes a wider discussion, it may be the degree to which it nicely summarizes that discussion, or if it's phrasing could be improved, it might be the degree to which it's phrasing clearly supports falsifiability. 
+The ```importance``` indicates the degree to which the claim is, in fact, "check_worthy". If it summarizes a wider discussion, it may be the degree to which it nicely summarizes that discussion, or if it's phrasing could be improved, it might be the degree to which it's phrasing clearly supports falsifiability. 
 
 Benchmarks will include claims with the highest, 'weighted, consensus importance' in a given time step. So it may also be taken to be an indication of the importance for the benchmark.
 
-Where a ```better-option``` is supplied within a decline-to-rate section, it indicates a related, more check-worthy claim.
+Where a ```better-option``` is supplied within a decline-to-rate section, it indicates a related, more check_worthy claim.
 
 Where ```support``` is supplied it indicates content that supports the view put forward.
 
@@ -154,7 +158,7 @@ For example:
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },	
-	"check-worthy": {
+	"check_worthy": {
 		"importance": 0.3,
 		"decline-to-rate": {
 			"reason": "not falsifiable - better options exist",
@@ -162,7 +166,7 @@ For example:
 			"ref": { "href": "claim/5d81f18d" }
 		}
 	},
-	"submitted-by": { "href": "agent/joef2016" },
+	"submitted_by": { "href": "agent/joef2016" },
 	"created": "2019-01-01T01:23:00.000Z"
 }
 ```
@@ -172,19 +176,19 @@ A response may simply indicate that the agent chooses not to rate this claim. In
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },
-	"check-worthy": {
+	"check_worthy": {
 		"decline-to-rate": {
 			"reason": "not falsifiable - statement of opinion"
 		}
 	},
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
 
-#### Truth-rating 
+#### Truth_rating 
 
-If an agent views a claim as check-worthy they may then assign a 'truth-rating' to it.  Apart from declining to rate, or annotating the claim there are two ways that a truth-rating can be indicated:
+If an agent views a claim as check_worthy they may then assign a 'truth_rating' to it.  Apart from declining to rate, or annotating the claim there are two ways that a truth_rating can be indicated:
 * A boolean indicating whether the claim is 'true' or 'false'.
 * A boolean true, with a weighting between 0 and 1 indicating 'how true'
 
@@ -194,10 +198,10 @@ For example:
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },	
-	"truth-rating": {
-		"call": false,
+	"truth_rating": {
+		"truthiness": false,
 	},
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
@@ -206,12 +210,11 @@ Or:
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },	
-	"truth-rating": {
-		"call": true,
-		"weighting": 0.3,
+	"truth_rating": {
+		"truthiness": 0.3,
 		"support": { "hash": "3d8c26e642e3b" }
 	},
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
@@ -228,7 +231,7 @@ Arbitrary json can be posted in an annotation, for instance:
 { 
 	"ref": { "href": "claim/7dc0051f" },	
 	"annotation": {"seq":1,"id":"fresh","changes":[{"rev":"1-967a00dff5e02add41819138abb3284d"}]},
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
@@ -239,7 +242,7 @@ This json will be stored (and, by default returned) as a content-hash, like this
 { 
 	"ref": { "href": "claim/7dc0051f" },	
 	"annotation": { "hash": "a2f12df5" },
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
@@ -252,17 +255,17 @@ Claim-responses, like all data, eventually become available to all members of th
 
 ### Benchmark
 
-A benchmark consists of a set of check-worthy claims chosen by some objective criteria. 
+A benchmark consists of a set of check_worthy claims chosen by some objective criteria. 
 
-One format for benchmarks is to choose one  check-worthy claim each hour and at each stage choose the claim with the highest, weighted importance not included in the benchmark already.
+One format for benchmarks is to choose one  check_worthy claim each hour and at each stage choose the claim with the highest, weighted importance not included in the benchmark already.
 
 It is not necessary for a claim to be included in the benchmark at the time that ratings are provided, and in many cases it will be added to the benchmark retroactively.
 
 ```json
 { 
-	"name": "December english twitter benchmark",
+	"name": "December 2018 english twitter benchmark",
 	"description": "",
-	"items": [
+	"claims": [
 		{
 			"timestamp": "2018-12-11T02:00:00.000Z",
 			"ref": { "href": "claim/1ab3f" }
@@ -276,7 +279,7 @@ It is not necessary for a claim to be included in the benchmark at the time that
 			"ref": { "href": "claim/4b40" }
 		}
 	],
-	"submitted-by": { "href": "agent/factbenchmark"},
+	"submitted_by": { "href": "agent/factbenchmark"},
 	"created": "2018-12-10T01:23:00.000Z",
 }
 
@@ -294,7 +297,7 @@ For transparency, (almost) every piece of data in the API is attached to an agen
 	"description": "XYZ Agent 2016",
 	"profile_image_url":
 "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z",
 	"self": { "href": "agent/joef2016" },	
 } 
@@ -302,14 +305,14 @@ For transparency, (almost) every piece of data in the API is attached to an agen
 
 ### Content (Content Cache)
 
-In order to allow and sharing of associated data against claims an end point exists for posting arbitrary data. This data is retrieved by a content-hash of the concetenation of mime-type and data field (not including the submitted-by etc data). If two agents post the same data the content will only be stored once, using the first submission. 
+In order to allow and sharing of associated data against claims an end point exists for posting arbitrary data. This data is retrieved by a content-hash of the concetenation of mime-type and data field (not including the submitted_by etc data). If two agents post the same data the content will only be stored once, using the first submission. 
 
 ```json
 {
 	"hash": "a2f12df5",
 	"mime-type": "text/html",
 	"data": {"..."},
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 }
 ```
@@ -324,7 +327,7 @@ It is also possible to request that content be retrieved by the server, timestam
 	"source_url": "https://twitter.com/anindita-guha/status/1036924232595382273",
 	"timestamp-captured": "2019-01-01T01:02:00.000Z",
 	"signature": "d76a0ee281f84e08b04f73670122f4c9",
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 }
 ```
@@ -339,10 +342,10 @@ Wherever possible the design of this API is designed to allow for idempotent (or
 
 ### Submitted-by 
 
-For almost all resources there is a ```submitted-by``` entry automatically created on server with the user id of the authenticated user.
+For almost all resources there is a ```submitted_by``` entry automatically created on server with the user id of the authenticated user.
 
 ```json
-"submitted-by": { "href": "agent/joef2016"},
+"submitted_by": { "href": "agent/joef2016"},
 ```
 
 ### Created 
@@ -373,13 +376,13 @@ To do this, while still allow graceful handling of errors we have a hidden log, 
 
 All end points, by default, hide data with a hidden log entry.
 
-For now, hidden log entries will only be accepted by the user with the corresponding submitted-by reference or by a special factbenchmark admin user.
+For now, hidden log entries will only be accepted by the user with the corresponding submitted_by reference or by a special factbenchmark admin user.
 
 ```json
 {
 	"ref": { "href": "claim/1ab3f" },
 	"reason": "accidental submission",
-	"submitted-by": { "href": "agent/joef2016"},
+	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 }
 ```
