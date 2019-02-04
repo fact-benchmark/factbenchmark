@@ -53,11 +53,11 @@ But first, let's define our terms.
 
 #### Agent 
 
-Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactbenchMark itself has it's own agent, so that data entered by ourselves is clearly marked as such. 
+Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself has its own agent, so that data entered by ourselves is clearly marked as such. 
 
 #### Claims.
 
-Our name for statements or rumours or quotes that are being evaluated for veracity (and check worthiness) by the agents.
+Our name for statements or rumors or quotes that are being evaluated for veracity (and check-worthiness) by the agents.
 
 #### Checkworthy.
 
@@ -65,7 +65,7 @@ The requirements for a claim to be check worthy, are that it is "falsifiable" an
 
 #### Validity.
 
-Check worthy claims are evaluated by agents for veracity - they are either 'true', 'false', or 'mixed' as outlined in more detail on the <a href="/documentation/">documentation</a> page. A claim may also be not yet evaluated, not check worthy, or of indeterminate veracity.
+Check-worthy claims are evaluated by agents for veracity - they are either 'true', 'false', or 'mixed' as outlined in more detail on the <a href="/documentation/">documentation</a> page. A claim may also be not yet evaluated, not check-worthy, or of indeterminate veracity.
 
 #### Benchmark. 
 
@@ -73,7 +73,7 @@ A benchmark collects together a set of claims that need to be evaluated, and put
 
 ## Typical claim lifecycle 
 
-It should be noted that while it is the intention of this project to allow and even encourage automation, some of these steps require a degree of human curation and judgement. Where needed during the trial, "Fact Benchmark" as a project is commited to provide human resourcing (with appropriate level of indepdence and skills) to ensure that the steps will flow through correctly.
+It should be noted that while it is the intention of this project to allow and even encourage automation, some of these steps require a degree of human curation and judgement. Where needed during the trial, "FactBenchmark" as a project is commited to provide human resourcing (with appropriate level of indepdence and skills) to ensure that the steps will flow through correctly.
 
 For each claim, the steps of the processing are as follows:
 
@@ -83,11 +83,11 @@ It is expected that claims will generally be 'found in the wild'.  This may invo
 
 #### 2. Phrasing.
 
-Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of it's source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsfiability'.
+Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of its source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsfiability'.
 
 #### 3. Submission. 
 
-Any agent can submit a claim for review at any time. To ensure a sufficient number of check worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the Factbenchmark agent.
+Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the Factbenchmark agent.
 
 #### 4. Annotations for support. 
 
@@ -100,7 +100,7 @@ Every annotation is signed by the agent submitting it but as many annotations as
 
 During this phase it is expected that at least some evidence of support that the claim was made, and that it is of interest would be provided if the claim hopes to get through the next phase.
 
-#### 5.  Evaluation for check worthiness
+#### 5.  Evaluation for check-worthiness
 
 Agents can also post 'responses' to claims at any time. Responses can include the following sections (sometimes one response may include multiple sections):
 - 'check-worthy' ('decline to rate', 'better options exist' or 'importance')
@@ -108,15 +108,15 @@ Agents can also post 'responses' to claims at any time. Responses can include th
 
 A "decline to evaluate" response is used when the agent believes the claim is poorly formed, does not have sufficient falsifiability or is not of general interest. Agents are encouraged but not required to provide reasons for a 'decline to evaluate' call. Reasons provided may provide useful feedack for others however.
 
-Alternatively a claim can be rated as 'check worthy', and, if desired an 'importance' weighting can be provided.
+Alternatively a claim can be rated as 'check-worthy', and, if desired an 'importance' weighting can be provided.
 
-Finally a 'better options exist' response is used to indicate that, while this claim is check worthy there is another claim - that is substantially similar - that is already in existence, that has better phrasing or that in some other way has better support. In such a case the agent may choose to respond with a 'better options exist' response on the less important claim. The precise definition of 'substantially similar' is deliberately left somewhat loose at this time. Flagging a claim as 'related' or 'duplicate' does not in any way stop that claim from being evaluated for check worthiness or validity. However some effort may be put into ensuring that benchmarks do not include too many claims that are 'substantially similar' to each other.
+Finally a 'better options exist' response is used to indicate that, while this claim is check-worthy there is another claim - that is substantially similar - that is already in existence, that has better phrasing or that in some other way has better support. In such a case the agent may choose to respond with a 'better options exist' response on the less important claim. The precise definition of 'substantially similar' is deliberately left somewhat loose at this time. Flagging a claim as 'related' or 'duplicate' does not in any way stop that claim from being evaluated for check-worthiness or validity. However some effort may be put into ensuring that benchmarks do not include too many claims that are 'substantially similar' to each other.
 
 #### 6. Acceptance into benchmark. 
 
-In order to avoid unnecessary work by agents, claims are added to a benchmark only once they reach a threshold for 'check worthiness' required by that benchmark (or more specifically, reach the maximum likelihood estimate for check-worthiness  - as described on the <a href="/model/">model</a> page). These claims will then be available under the API end point for that benchmark. Acceptance into benchmark may also trigger notifications. 
+In order to avoid unnecessary work by agents, claims are added to a benchmark only once they reach a threshold for 'check-worthiness' required by that benchmark (or more specifically, reach the maximum likelihood estimate for check-worthiness  - as described on the <a href="/model/">model</a> page). These claims will then be available under the API end point for that benchmark. Acceptance into benchmark may also trigger notifications. 
 
-Responsess with "truth-rating" estimates are accepted at any time, but for calculation of leaderboard purposes responses received before acceptance will be considered to have been made at the time of acceptance. 
+Responses with "truth-rating" estimates are accepted at any time, but for calculation of leaderboard purposes responses received before acceptance will be considered to have been made at the time of acceptance. 
 
 #### 7. Evaluation for validity. 
 
@@ -135,7 +135,7 @@ That said it is not the intention of the benchmark to attempt to provide compreh
 
 Calculations for agent reputation are a key part of the system, explained in more detail on the <a href="/model/">model</a> page. The key point to understand is that the reputation is based on the difference between how unlikely the response was at the time it was made and how unlikely it is 'now'. 
 
-A response corresponding to the current consensus  has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at thee time). The precise caculation involves calculating the wasserstein metric but the key equation is 
+A response corresponding to the current consensus has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at the time). The precise caculation involves calculating the wasserstein metric but the key equation is 
 reputation =  shift * tan(innovation / accuracy)
 
 That is, the expected likelihood of a given response, given the current consensus estimate for 'truthiness' is compared with the expected likelihood of the given response at the time that the response was given. 
