@@ -79,7 +79,7 @@ For each claim, the steps of the processing are as follows:
 
 #### 1. Discovery
 
-It is expected that claims will generally be 'found in the wild'.  This may involve detecting a spike of social media activity around a particular rumour and finding a representative tweet for that rumour. Or it may involve parsing a speech from a prominent figure and finding check worthy claims that they make. We expect almost all claims to have one or more supporting sources listed in their 'evidence' by way of reaching the threshold for 'general interest'.
+It is expected that claims will generally be 'found in the wild'.  This may involve detecting a spike of social media activity around a particular rumour and finding a representative tweet for that rumor. Or it may involve parsing a speech from a prominent figure and finding check worthy claims that they make. We expect almost all claims to have one or more supporting sources listed in their 'evidence' by way of reaching the threshold for 'general interest'.
 
 #### 2. Phrasing.
 
@@ -87,7 +87,7 @@ Even though claims should ideally have at least one identifiable source it can b
 
 #### 3. Submission. 
 
-Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the Factbenchmark agent.
+Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the FactBenchmark agent.
 
 #### 4. Annotations for support. 
 
