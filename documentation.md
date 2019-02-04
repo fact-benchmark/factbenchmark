@@ -74,7 +74,7 @@ We are currently seeking feedback on many aspects of this project but especially
 A claim is a short statement which should be falsifiable and of general interest (important).
 
 **To be regarded as check worthy a claim should be 'falsifiable', in that it:**
-* is phrased in an non-ambiguous way
+* is phrased in a non-ambiguous way
 * is not a prediction about the future
 * relates to (potentially) verifiable information 
 * is not phrased as a question or inquiry
@@ -146,7 +146,7 @@ For example:
 } 
 ```
 
-The ```importance``` indicates the degree to which the claim is, in fact, "check_worthy". If it summarizes a wider discussion, it may be the degree to which it nicely summarizes that discussion, or if it's phrasing could be improved, it might be the degree to which it's phrasing clearly supports falsifiability. 
+The ```importance``` indicates the degree to which the claim is, in fact, "check_worthy". If it summarizes a wider discussion, it may be the degree to which it nicely summarizes that discussion, or if its phrasing could be improved, it might be the degree to which its phrasing clearly supports falsifiability. 
 
 Benchmarks will include claims with the highest, 'weighted, consensus importance' in a given time step. So it may also be taken to be an indication of the importance for the benchmark.
 
@@ -223,7 +223,7 @@ Or:
 
 Another form of response to a claim is an annotation.
 
-Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped, which can allow the agents to store their own data, and make their own intepretations. (In such cases the "Fact Benchmark" service acts a little like a simple block chain - only without the block or the chain).
+Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped, which can allow the agents to store their own data, and make their own intepretations. (In such cases the "FactBenchmark" service acts a little like a simple block chain - only without the block or the chain).
 
 Arbitrary json can be posted in an annotation, for instance:
 
@@ -413,4 +413,4 @@ We may build a GraphQL front end on top of the read-only aspects of this API (es
 
 --
 
-If you have any further thoughts about the design of this API we invite our member organisations to please contact us at feedback@factbenchmark.org 
+If you have any further thoughts about the design of this API we invite our member organizations to please contact us at feedback@factbenchmark.org 
