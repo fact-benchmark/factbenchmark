@@ -7,7 +7,7 @@ keywords:
 
 title: Fact Benchmark 
 sub_title: An ongoing, kaggle-like benchmark for real-time detection of fake news.
-description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumour from fact.
+description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumor from fact.
 
 buttons:
     - content: How it works
