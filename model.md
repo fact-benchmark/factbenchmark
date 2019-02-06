@@ -27,7 +27,7 @@ page_nav:
 
 We use a bayesian model to jointly evaluate both the truth of claims and (at the same time) the skill of the agents evaluating the claim. 
 
-Prior work in this space includes <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>.
+To set context, prior work in this space includes <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>.
 
 Some of our own earlier work on bayesian modeling of problems with this type of uncertainty is <a href="https://github.com/factbenchmark/reality-reliability">outlined here</a>. At this time our work on this model remains a work in progress, but it is advanced enough that we can at least outline the basic idea here.
 

@@ -34,22 +34,43 @@ page_nav:
 
 ## Introduction 
 
-We use a bayesian model to jointly evaluate both the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, an agent gets points for being early with a response that is near to the *current* consensus.
-
-The current consensus as to the veracity of any given claim also updates, in theory indefinitely, so the the corresponding points awarded can also change at any time in the future based on the consensus at that time. (However, 'benchmarks' place a finite time period around this so as to provide a clear, publishable benchmark). 
+We use a bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation and truth - as inspired by papers such as <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
 
 As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful data set for use of future researchers in the field. 
 
-## Leaderboards 
+### Our contribution
 
-There are two leaderboards - one for check worthy claims and one for validity. Agents get higher scores on the leaderboard if they posted an evaluation contributing the most information towards the current consensus. 
+In the <a href="http://www.fakenewschallenge.org/#faq">FAQ for Fake News Challenge</a> they write that truth labeling poses several challenges:
 
-A claim goes through various stages as it moves through the benchmark. By outlining the lifecycle of a claim, here, we also get a good idea of how the system works.
+<ul class="quote">
+<li>There exists very little labeled training data of fake vs. real news stories.</li>
+<li>The data that does exist is almost all copyright protected.</li>
+<li>The data that does exist is extremely diverse and unstructured, making hard to train on.</li>
+<li>Any dataset containing claims with associated “truth” labels is going to be contested as biased.</li>
+</ul>
 
-But first, let's define our terms.
+It is our intention to address all four of these challenges by providing a unbiased, independent, open, shared data resource of tagged data which all organisations can contribute to. We also hope to go some way towards addressing the question of bias with a principled bayesian approach, as described in the pages of this site.
+
+We should acknowledge the great work already done in the area of 'fake news' benchmarks - such as the <a href="https://www.cs.ucsb.edu/~william/software.html">LIAR</a> benchmark dataset,  the work done by <a href="http://fever.ai/">fever.ai</a>, <a href="https://idir-server2.uta.edu/claimbuster/">claimbuster</a>, <a href="http://www.fakenewschallenge.org">fakenewschallenge.org</a> and many others who have been working on the problem of creating research and benchmark data sets - many of whom we are proud to have as members. 
+
+It is our hope that, together, we can extend and build on this existing work with this real-time shared benchmark.
+
+### Leaderboards 
+
+In a way that is similar to an ongoing Kaggle competitions there are two real-time leaderboards each of which reflects the key parts of the challenge. 
+- Finding "check worthy" claims.
+- Evaluating those claims for validity. 
+
+Agents get higher scores on either leaderboard if they post an evaluation <i>contributing the most information</i> towards the current consensus for any given claim. 
+
+Because the current 'expected value' regarding the veracity of any given claim updates over time, the corresponding points awarded for any given response can also change over time. (However, 'benchmarks' place an arbitrary time limit around this so as to provide a more publishable benchmark).
+
+Overall, a claim goes through various stages as it moves through the benchmark. On this page we outline the lifecycle of a claim, which creates a good structure to describe the overall system in more detail. 
+
+However, first, let's define our terms.
 
 
-## Definition of terms
+### Definition of terms
 
 #### Agent 
 
@@ -87,11 +108,13 @@ Even though claims should ideally have at least one identifiable source it can b
 
 #### 3. Submission. 
 
-Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims for the first benchmark, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims - which will be submitted using the FactBenchmark agent.
+Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims are available for the first benchmarks, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims if needed. These will be submitted to the system in the same way as any other agent.
 
-#### 4. Annotations for support. 
+#### 4. Annotations to support check-worthy claim
 
-Any time after submission agents can provide annotations on claims. Annotations are deliberately, relatively schema-less and open to interpretation. That said there are three categories of annotation:
+Any time after a submission agents can provide annotations on claims. 
+
+Annotations are relatively schema-less and open to interpretation. That said there are three categories of annotation:
 - Annotations that provide support that the claim was made and of interest
 - Annotations that provide support (or refutation) of the claim itself, and 
 - Other annotations. 

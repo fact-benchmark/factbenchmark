@@ -64,11 +64,6 @@ grid_navigation:
       cta: Read more
       url: 'roadmap' 
 
-    - title: Members
-      excerpt: Our founding member organisations
-      cta: Read more
-      url: 'members' 
-
     - title: Data Manifesto
       excerpt: Our guiding principles
       cta: Read more
@@ -86,3 +81,10 @@ live_navigation:
       excerpt: Real-time rankings
       url: '#'
 ---
+
+<!--    
+    - title: Members
+      excerpt: Our founding member organisations
+      cta: Read more
+      url: 'members' 
+ -->

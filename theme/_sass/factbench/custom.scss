@@ -160,5 +160,13 @@ div.section .content {
   }
 }
 
+ul.quote {
+    background: url(../images/openquote.gif) top left no-repeat;
+    padding: 2.8rem 1rem 1rem 1.5rem;
+    background-color: #fbfeec;
+    li {
+      padding: 0.2rem 2rem
+    }
+}
 
 
