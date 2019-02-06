@@ -34,9 +34,11 @@ page_nav:
 
 ## Introduction 
 
-We use a bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation and truth - as inspired by papers such as <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
+FactBenchmark allows researchers in the field to share check-worthy claims, make evaluations of their veracity and be scored as to their timeliness and accuracy.
 
-As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful data set for use of future researchers in the field. 
+We use a bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation vs truth. A well known paper that uses a similar approach is <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
+
+As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful dataset for current and future researchers in the field. 
 
 ### Our contribution
 
@@ -49,38 +51,37 @@ In the <a href="http://www.fakenewschallenge.org/#faq">FAQ for Fake News Challen
 <li>Any dataset containing claims with associated “truth” labels is going to be contested as biased.</li>
 </ul>
 
-It is our intention to address all four of these challenges by providing a unbiased, independent, open, shared data resource of tagged data which all organisations can contribute to. We also hope to go some way towards addressing the question of bias with a principled bayesian approach, as described in the pages of this site.
+It is our intention to address all four of these challenges by providing a unbiased, independent, open, shared data resource of tagged data in collaboration with our members. We also hope to go some way towards addressing the question of bias with a principled bayesian approach, as described in more detail below.
 
-We should acknowledge the great work already done in the area of 'fake news' benchmarks - such as the <a href="https://www.cs.ucsb.edu/~william/software.html">LIAR</a> benchmark dataset,  the work done by <a href="http://fever.ai/">fever.ai</a>, <a href="https://idir-server2.uta.edu/claimbuster/">claimbuster</a>, <a href="http://www.fakenewschallenge.org">fakenewschallenge.org</a> and many others who have been working on the problem of creating research and benchmark data sets - many of whom we are proud to have as members. 
+We wish to acknowledge the great work already done in the area of 'fake news benchmarks' - such as the <a href="https://www.cs.ucsb.edu/~william/software.html">LIAR</a> benchmark dataset,  the work done by <a href="http://fever.ai/">fever.ai</a>, <a href="https://idir-server2.uta.edu/claimbuster/">claimbuster</a>, <a href="http://www.fakenewschallenge.org">fakenewschallenge.org</a> and the many others who have been working on the problem of creating research and benchmark data sets - many of whom we are proud to have as members. 
 
-It is our hope that, together, we can extend and build on this existing work with this real-time shared benchmark.
+It is our hope that, together, we can extend and build on this existing work with this real-time shared opendata benchmark.
 
 ### Leaderboards 
 
-In a way that is similar to an ongoing Kaggle competitions there are two real-time leaderboards each of which reflects the key parts of the challenge. 
+As with a Kaggle competitions there are two real-time leaderboards that indicate the performance of each of organisation (or 'agent') against the two key aspects of the challenge. 
 - Finding "check worthy" claims.
 - Evaluating those claims for validity. 
 
-Agents get higher scores on either leaderboard if they post an evaluation <i>contributing the most information</i> towards the current consensus for any given claim. 
+Scoring high on either leaderboard requires both timeliness and 'accuracy'. Specifically agents get higher scores if they post an evaluation which would <i>contribute the most information</i> towards the current consensus for any given claim. 
 
-Because the current 'expected value' regarding the veracity of any given claim updates over time, the corresponding points awarded for any given response can also change over time. (However, 'benchmarks' place an arbitrary time limit around this so as to provide a more publishable benchmark).
+Because the current expected value or 'consensus' regarding the veracity or check worthiness of any given claim updates over time, the corresponding points awarded for that item can also change over time. (Benchmarks place an arbitrary time limit around this so as to provide a clear and publishable benchmark, however).
 
-Overall, a claim goes through various stages as it moves through the benchmark. On this page we outline the lifecycle of a claim, which creates a good structure to describe the overall system in more detail. 
+A claim goes through various stages as it moves through the system. On this page we outline the lifecycle of a claim, which will also help describe the overall system in more detail. 
 
-However, first, let's define our terms.
-
+First, let's define our terms.
 
 ### Definition of terms
 
 #### Agent 
 
-Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself has its own agent, so that data entered by ourselves is clearly marked as such. 
+Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself also has its own agent, so that any data entered by Factbenchmark is clearly marked as such. All data in the system (including scoring) is attributable to the agent that submitted it or calculated it. 
 
 #### Claims.
 
-Our name for statements or rumors or quotes that are being evaluated for veracity (and check-worthiness) by the agents.
+Our name for statements, rumors or quotes that are being evaluated for 'check-worthiness' and 'truthiness' (or veracity).
 
-#### Checkworthy.
+#### Check worthy.
 
 The requirements for a claim to be check worthy, are that it is "falsifiable" and "of general interest" as outlined in more detail on the <a href="/documentation/">documentation</a> page.
 
