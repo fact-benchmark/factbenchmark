@@ -169,4 +169,30 @@ ul.quote {
     }
 }
 
+.footer_nav {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
 
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+
+
+    li {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: .25em 0;
+      padding: 0 1em;
+      text-align: center;
+      border-left: 1px solid #ccc;
+    
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}

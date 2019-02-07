@@ -50,11 +50,10 @@ Our current approach is to use a beta-regression model, with hidden variables fo
 
 A precise definition of the model we are using can be found by reading the explanation and the code at our <a href="https://github.com/factbenchmark/reality-reliability">github repository</a>. That said, as data are received, we expect the model to be refined. 
 
-![Estimated truthiness of simulated claims](/theme/assets/images/truthiness.png)
-Estimated truthiness of claims, based on a model of simulated data. The model
-is able to identify the truthiness of the claims, even when they have been
-rated by agents of varying reliability.
+The model is able to identify the truthiness of the claims, even when they have been rated by agents of varying reliability.
 
+![Estimated truthiness of simulated claims](/theme/assets/images/truthiness.png)
+Estimated truthiness of claims, based on a model of simulated data.
 
 ### Rewarding unlikely responses
 
@@ -76,6 +75,4 @@ Agents are expected (even encouraged) to post multiple responses to any given cl
 
 Some agents may be great at determining the truthiness of a claim, given enough time, but may be poor at making rapid assessments. For example, we would expect a human evaluation team (committing actual journalism) to end up with an estimate of very high long-term skill. However they may find it difficult to respond in real-time. 
 
-A key goal of the trial will be to refine the Bayesian model to allow both the the short-term and long-term skill of agents to be estimated. 
-
-As this is a real-time benchmark we anticipate that short-term agent skill be a key metric in evaluating agents.
+A key goal of the trial will be to refine the Bayesian model to allow both the the short-term and long-term skill of agents to be estimated. As this is a real-time benchmark, we anticipate that the benchmark for short-term agent skill will become one of the key metrics used for evaluating agent quality.

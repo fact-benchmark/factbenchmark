@@ -56,12 +56,10 @@ Currently our model, being deliberately 'naieve', requires a lot of time to comp
 To <a href="https://en.wikiquote.org/wiki/Helmuth_von_Moltke_the_Elder">misquote</a> Helmuth von Moltke, "no theoretical model long survives contact with real world data". In that context, we see this alpha phase as a sort of 'sea trials' for our approach, during which we will collect enough data to refine the approach and refine our model.
 
 ## Epxpressions of interest 
+ 
+Fifty key institutions and groups have expressed interest in taking part in this project but please note that the alpha phase trial is a separate preliminary project involving a much smaller group. 
 
-We sincerely hope that your organisation will be interested in helping to classify a few claims per day.
-
-We currently have more than fifty key institutions and groups who have expressed interest in taking part in this project but please note that the alpha phase trial is a smaller preliminary project with a smaller group so please let us know separately if you are keen to take part.
-
-To express your interest please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
+To express your interest in taking part the alpha trial, please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
 
 <!-- Contact form approach - it works but yeah... naj
  --><!-- <form action="https://www.formingo.co/submit/84d4c621-2c55-4998-80cd-e11cce3ad064"

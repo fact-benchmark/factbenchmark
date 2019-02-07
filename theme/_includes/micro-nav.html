@@ -1,11 +1,14 @@
 <div class="micro-nav">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
-				<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/" class="micro-nav__back">
-					<i class="icon icon--arrow-left"></i>
-					Back to homepage
-				</a><!-- /.micro-nav__back -->
+			<div class="col-xs-12 footer_nav">
+				{% if site.doks.footer.nav %}
+					<ul class="list-unstyled">
+						{% for item in site.doks.footer.nav %}
+							<li><a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
+						{% endfor %}
+					</ul><!-- /.footer_nav -->
+			{% endif %}
 			</div><!-- /.col -->
 		</div><!-- /.row -->
 	</div><!-- /.container -->
