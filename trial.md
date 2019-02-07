@@ -18,7 +18,7 @@ page_nav:
         url: '/model'
     next:
         content: Documentation
-        url: '/Documentation'
+        url: '/documentation'
 ---
 
 # Alpha phase trial
