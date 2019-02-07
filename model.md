@@ -10,7 +10,7 @@ micro_nav: true
 # Hero section
 title: Modeling "truthiness"
 description: >
-    Our approach to measuring the truthiness (and check-worthiness) of each claim is a bayesian model which simulataneously rates the 'accuracy' of agents as well as of the claims they are evaluating. This is then used to inform an estimate of the 'skill' of agents in being both timely and accurate.
+    Our approach to measuring the truthiness (and check-worthiness) of each claim is a bayesian model which simultaneously rates the 'accuracy' of agents as well as of the claims they are evaluating. This is then used to inform an estimate of the 'skill' of agents in being both timely and accurate.
 
 # Page navigation
 page_nav:
@@ -50,11 +50,10 @@ Our current approach is to use a beta-regression model, with hidden variables fo
 
 A precise definition of the model we are using can be found by reading the explanation and the code at our <a href="https://github.com/factbenchmark/reality-reliability">github repository</a>. That said, as data are received, we expect the model to be refined. 
 
-![Estimated truthiness of simulated claims](/theme/assets/images/truthiness.png)
-Estimated truthiness of claims, based on a model of simulated data. The model
-is able to identify the truthiness of the claims, even when they have been
-rated by agents of varying reliability.
+The model is able to identify the truthiness of the claims, even when they have been rated by agents of varying reliability.
 
+![Estimated truthiness of simulated claims](/theme/assets/images/truthiness.png)
+Estimated truthiness of claims, based on a model of simulated data.
 
 ### Rewarding unlikely responses
 

@@ -169,4 +169,52 @@ ul.quote {
     }
 }
 
+.footer_nav {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
 
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: .25em 0;
+      padding: 0 4em;
+      text-align: center;
+      
+      a {
+        border-bottom: none;
+        width: 100%;
+       
+        &:hover {
+          border-bottom: .0625em solid;
+        }
+      }
+
+      &:before {
+        content: none;
+      }
+
+      &:first-child {
+        flex-grow: 0.8;
+        border-left: none;
+        text-align: left;
+        padding-left: 0;
+      }
+      &:last-child {
+        flex-grow: 0.8;
+        text-align: right;
+        padding-right: 0;
+      }
+    }
+  }
+}

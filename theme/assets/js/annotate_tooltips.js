@@ -1,5 +1,5 @@
 
-var tooltip_message = "We are currently seeking feedback from our partners. Please highlight text and click annotate to add yours.";
+var tooltip_message = "We are currently seeking feedback using hypothes.is. Highlight any text and click 'annotate' to add yours.";
 var tooltip_selector = ".intro-content p, .content p, .content li";
 var total_show_count = 0;
 var max_show_count = 50;
@@ -7,6 +7,7 @@ var max_show_count = 50;
 ( function( $, win) {
 	'use strict';
     
+    var tooltip_addded = false;
 
 	//---------- annotate tooltip hovers 
     var targets = $(tooltip_selector),
@@ -20,6 +21,8 @@ var max_show_count = 50;
         tip     = tooltip_message;
         tooltip = $('<div class="tooltip"></div>');
 
+        if (tooltip_addded)
+            return false;
 
         if (!tip || tip === '') {
             return false;
@@ -46,26 +49,28 @@ var max_show_count = 50;
                 posTop = target.offset().top - target.height() / 2;
 
 
-            if (posLeft < 0) {
-                posLeft = target.offset().left + target.width() / 2 - 20;
-                tooltip.addClass('left');
-            } else {
-                tooltip.removeClass('left');
-            }
+            tooltip.addClass('left');
 
-            if (posLeft + tooltip.width() > $(win).width()) {
-                posLeft = target.offset().left - tooltip.width() + target.width() / 2 + 20;
-                tooltip.addClass('right');
-            } else {
-                tooltip.removeClass('right');
-            }
+            // if (posLeft < 0) {
+            //     posLeft = target.offset().left + target.width() / 2 - 20;
+            //     tooltip.addClass('left');
+            // } else {
+            //     tooltip.removeClass('left');
+            // }
 
-            if (posTop < 0) {
-                posTop = target.offset().top + target.height();
-                tooltip.addClass('top');
-            } else {
-                tooltip.removeClass('top');
-            }
+            // if (posLeft + tooltip.width() > $(win).width()) {
+            //     posLeft = target.offset().left - tooltip.width() + target.width() / 2 + 20;
+            //     tooltip.addClass('right');
+            // } else {
+            //     tooltip.removeClass('right');
+            // }
+
+            // if (posTop < 0) {
+            //     posTop = target.offset().top + target.height();
+            //     tooltip.addClass('top');
+            // } else {
+            //     tooltip.removeClass('top');
+            // }
 
             if (++total_show_count>max_show_count) {
                 return;
@@ -77,21 +82,26 @@ var max_show_count = 50;
             }).animate({
                 translateY: '10px',
                 opacity: 1
-            }, 400 );
+            }, 900 );
+
+            // basically disabled the tool tip function completely
+            tooltip_addded = true;
+            $("#tooltip_holder").append(tooltip);
+
         };
 
         initTooltip();
         $(win).resize(initTooltip);
 
         var removeTooltip = function() {
-            tooltip.animate({
-                translateY: '-10px',
-                opacity: 0
-            }, 50, 'linear', function() {
-                $(this).remove();
-            });
+            // tooltip.animate({
+            //     translateY: '-10px',
+            //     opacity: 0
+            // }, 50, 'linear', function() {
+            //     $(this).remove();
+            // });
 
-            target.attr('title', tip);
+            // target.attr('title', tip);
         };
 
         target.on('mouseout', removeTooltip);

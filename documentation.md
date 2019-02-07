@@ -9,21 +9,21 @@ micro_nav: true
 
 # Hero section
 
-title: API Documentation (WIP)
+title: API Documentation
 description: The API aims to provide access to an independent, collective, shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime fact checking.
 
 # Page navigation
 page_nav:
     prev:
-        content: Modeling Truthiness
-        url: '/model'
+        content: Alpha phase trial
+        url: '/trial'
     next:
-        content: Roadmap
-        url: '/roadmap'
+        content: Manifesto
+        url: '/manifesto'
 ---
 
 
-# Fact Benchmark API (v0.5)
+# Fact Benchmark API
 
 ## Intro
 
@@ -147,7 +147,7 @@ For example:
 } 
 ```
 
-The ```importance``` indicates the degree to which the claim is, in fact, "check_worthy". If it summarizes a wider discussion, it may be the degree to which it nicely summarizes that discussion, or if its phrasing could be improved, it might be the degree to which its phrasing clearly supports falsifiability. 
+The ```check_worthiness``` indicates the degree to which the claim is, in fact, "check_worthy". 
 
 Benchmarks will include claims with the highest, 'weighted, consensus importance' in a given time step. So it may also be taken to be an indication of the importance for the benchmark.
 
@@ -160,8 +160,8 @@ For example:
 { 
 	"ref": { "href": "claim/7dc0051f" },	
 	"check_worthy": {
-		"importance": 0.3,
-		"decline-to-rate": {
+		"check_worthiness": 0.3,
+		"decline_to_rate": {
 			"reason": "not falsifiable - better options exist",
 			"support": { "hash": "3d8c26e642e3b" },
 			"ref": { "href": "claim/5d81f18d" }
@@ -172,7 +172,7 @@ For example:
 }
 ```
 
-A response may simply indicate that the agent chooses not to rate this claim. In such cases the ```importance``` is implicitly assumed to be 0.
+A response may simply indicate that the agent chooses not to rate this claim. In such cases the ```check_worthiness``` is implicitly assumed to be 0.
 
 ```json
 { 
@@ -248,11 +248,19 @@ This JSON will be stored (and, by default returned) as a content-hash, like this
 } 
 ```
 
+<<<<<<< HEAD
 One use for the annotations field may be to indicate groups of related claims, but the schema and mechanism for this remains to be determined.
 
 #### 24Hr Time Delay
 
 Claim-responses, like all data, eventually become available to all members of the benchmark. However, to ensure independence of submissions, detailed claim-responses are not available to other agents, until after a 24hr time delay.
+=======
+Annotations can be placed under the following categories on each claim.
+- Attribution
+- Related claims
+- Evidence (Not supported)
+- Evidence (Supporting)
+>>>>>>> 1b446a0478ca315af2a310b90eeaf92d305000c9
 
 ### Benchmark
 
@@ -261,6 +269,8 @@ A benchmark consists of a set of check_worthy claims chosen by some objective cr
 One format for benchmarks is to choose one  check_worthy claim each hour and at each stage choose the claim with the highest, weighted importance not included in the benchmark already.
 
 It is not necessary for a claim to be included in the benchmark at the time that ratings are provided, and in many cases it will be added to the benchmark retroactively.
+
+Realtime calculations of agent points will also be made available under the benchmark end point.
 
 ```json
 { 
@@ -288,7 +298,7 @@ It is not necessary for a claim to be included in the benchmark at the time that
 
 ### Agent (Member)
 
-For transparency, (almost) every piece of data in the API is attached to an agent record, including, wherever possible, data created by the system.
+For transparency, (almost) every piece of data in the API is attached to an agent record, including, wherever possible, data created by factbenchmark.org itself, acting as an agent.
 
 ```json
 {
@@ -337,9 +347,10 @@ The mime-type hash-html should be treated in a special way. When retrieving cont
 
 ## Cross cutting concerns 
 
-### Idempotent, CRDT data model
 
-Wherever possible the design of this API is designed to allow for idempotent (or at least CRDT, Conflict-Free Replicated Data) data update models. That means that records, once submitted, cannot be updated, only appended to.
+#### 24Hr Time Delay
+
+Claim-responses, like all data, eventually become available to all members of the benchmark. However, to ensure independence of submissions (no peeking at other people's answers) claim-responses are not available to other agents, until after a 24hr time delay.
 
 ### Submitted-by 
 
@@ -351,7 +362,7 @@ For almost all resources there is a ```submitted_by``` entry automatically creat
 
 ### Created 
 
-For almost all resources there is a ```created``` entry recorded as ISO-8601 formatted UTC indicating the time on the server at the moment the entry was submitted.
+For almost all resources there is also a ```created``` entry which is the server measured ISO-8601 UTC timestamp of the time on the server at the moment the entry was submitted.
 
 ```json
 "created": "2019-01-01T01:23:00.000Z"
@@ -359,12 +370,15 @@ For almost all resources there is a ```created``` entry recorded as ISO-8601 for
 
 ### Self ref 
 
-The server will allocate ids to objects on submission. In read responses it may include a self reference as
-follows (inspired by, but not quite HATEOS).
+The server will allocate ids to objects on submission. REST responses (though not GraphQL responses) will include a self reference for each top level resource.
 
 ```json
 "self": { "href": { "item-type/6b051a34-e4b8-4c4f-83a2-de2c3c2f144e" } }
 ```
+
+### Idempotent, CRDT data model
+
+Wherever possible the design of this API is designed to allow for idempotent (or at least CRDT, Conflict-Free Replicated Data) data update models. That means that records, once submitted, cannot be updated, only appended to.
 
 ### Hidden log
 
@@ -372,12 +386,17 @@ As part of our guiding principles we aim to:
 - have attributions for all data
 - allow idempotent data schemas
 - not delete any data
+- follow a CRDT approach, generally.
 
+<<<<<<< HEAD
 To do this, while still allow graceful handling of errors we have a hidden log, with values like the following. 
 
 All end points, by default, hide data with a hidden log entry.
 
 For now, hidden log entries will only be accepted by the user with the corresponding submitted_by reference or by a special FactBenchmark admin user.
+=======
+As a safety valve, however, _some_ facility for handling unexpected problems is provided by the 'hidden' log, with values like the following. 
+>>>>>>> 1b446a0478ca315af2a310b90eeaf92d305000c9
 
 ```json
 {
@@ -388,30 +407,30 @@ For now, hidden log entries will only be accepted by the user with the correspon
 }
 ```
 
-Special handling is used for hidden responses, when dealing with computation of agent reputations.
+Hidden log entries will only be accepted by the user with the corresponding ```submitted_by``` reference or by a special factbenchmark admin user (though it will be noted as such).
 
+Special handling is used for hidden annotations and in other cases where it makes sense. Generally speaking however, once content is published to the API it is not revokable.
+
+<!-- 
 ## Future directions 
 
-After the first round of feedback we have attempted to simplify our API to the bare essentials. There are, however, some features we would like to build back in when we can. 
 
 ### Mixed media and longer form 'claims' 
 
 In the above, we only allow:
 * Claims that can be represented in short text form. 
 
-In future iterations we'd like to extend this model to include:
-* Mixed media posts, such as urban rumors
+In the future we'd like to extend this model to include:
+* Mixed media content, such as urban rumors with images
 * Article length content
 * Quotes from well known persons, in speeches or other venues (these can be handled, but could do with special handling)
 
 ### Collections of related claims that comprise a 'rumor'. 
 
 We would also like to address the relationship between specific wordings of a claim and the existence (in some cases) of a storm of related tweets and representations of the 'same' rumor or idea. 
-
+ -->
+<!-- 
 ### GraphQL
 
 We may build a GraphQL front end on top of the read-only aspects of this API (especially if there is interest in this). This will naturally fall out of the basic design of the REST API. 
-
---
-
-If you have any further thoughts about the design of this API we invite our member organizations to please contact us at info@factbenchmark.org
+ -->

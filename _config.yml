@@ -15,6 +15,17 @@ doks:
             - item_name: Manifesto
               item_url: '/manifesto'
     footer:
+        nav:
+            - item_name: How it works
+              item_url: '/how'
+            - item_name: Model
+              item_url: '/model' 
+            - item_name: Join the trial 
+              item_url: '/trial' 
+            - item_name: Documentation
+              item_url: '/documentation'
+            - item_name: Manifesto
+              item_url: '/manifesto'
         content:
             logo:
                 text: 
