@@ -37,7 +37,7 @@ Edward has a PhD from the University of Cambridge, where he studied theoretical 
 
 Miles Thompson is a technical architect with more than twenty years experience as developer and technical lead especially in finance and machine learning, including acting as the CTO and then Senior Technical Architect of the leading independent financial research provider in NYC for many years. He holds a Bsc (Hons I) in Math and BA in Sociology.
 
-** Yvan Richard, PhD**
+**Yvan Richard, PhD**
 
 Yvan is an ecologist who specialises in using statistical computing software  to solve complex problems.
 
