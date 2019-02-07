@@ -85,3 +85,5 @@ typings/
 _site
 .vagrant
 .jekyll-metadata
+Gemfile
+Gemfile.lock
