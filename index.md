@@ -47,11 +47,6 @@ grid_navigation:
       cta: Read more
       url: 'documentation' 
 
-    - title: Roadmap
-      excerpt: Our development roadmap
-      cta: Read more
-      url: 'roadmap' 
-
     - title: Data Manifesto
       excerpt: Our guiding principles
       cta: Read more
@@ -61,13 +56,13 @@ grid_navigation:
 live_navigation:
     - title: Latest Submissions
       excerpt: "/r/all for submitted claims"
-      url: '#'
-    - title: Checkworthy Claims 
-      excerpt: Active, check-worthy claims
-      url: '#'
+      url: 'https://factbenchmark.github.io/api-client/#claims_all'
+    - title: Checkworthy claims
+      excerpt: Active, checkworthy claims
+      url: 'https://factbenchmark.github.io/api-client/#claims_filter'
     - title: Leaderboard 
       excerpt: Real-time rankings
-      url: '#'
+      url: 'https://factbenchmark.github.io/api-client/#agents'
 ---
 
 <!--    
@@ -75,6 +70,12 @@ live_navigation:
       excerpt: Our founding member organisations
       cta: Read more
       url: 'members' 
+
+      
+    - title: Roadmap
+      excerpt: Our development roadmap
+      cta: Read more
+      url: 'roadmap' 
 -->
 <!-- 
 - title: How it works
