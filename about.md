@@ -27,7 +27,7 @@ The team at FactBenchmark is a diverse group not all of whom are listed here. No
 
 **Linc Gasking**
 
-Linc Gasking is a serial entrepreneur with many highly successful startup exits to his name. He is an award winning photographer, TedX speaker, and sought after community leader and startup mentor.
+Linc Gasking is a successful entrepreneur and award winning photographer, TEDx speaker and community builder. He initiated the <a href="http://www.opensourceopensociety.com/">Open Source Open Society conference</a> and was <a href="https://futureofstorytelling.org/speaker/linc-gasking">co-founding CEO</a> of hologram company 8i.
 
 **Edward Abraham, PhD**
 
