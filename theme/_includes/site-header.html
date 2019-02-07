@@ -22,7 +22,7 @@
 					{% endif %}
 					{% if site.doks.header.nav %}
 						<ul class="site-header__nav hidden-xs">
-								<li><a href="{{ site.api_url }}" target="_blank">API</a></li>
+<!-- 								<li><a href="{{ site.api_url }}" target="_blank">API</a></li> -->
 								{% for item in site.doks.header.nav %}
 									<li><a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.item_url }}">{{ item.item_name }}</a></li>
 								{% endfor %}

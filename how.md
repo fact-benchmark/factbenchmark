@@ -8,14 +8,6 @@ comments: true
 title: How it works
 description: What the Realtime Factcheck Benchmark is all about. 
 
-# Author box
-author:
-    title: About us 
-    title_url: 'about'
-    external_url: false
-    description: Who we are
-
-
 # Micro navigation
 micro_nav: true
 

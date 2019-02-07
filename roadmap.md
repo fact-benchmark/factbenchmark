@@ -17,9 +17,8 @@ page_nav:
         content: Documentation
         url: '/documentation'
     next:
-        content: Members
-        url: '/members'        
-
+        content: Manifesto
+        url: '/manifesto'
 ---
 
 # Development Roadmap
@@ -27,6 +26,9 @@ page_nav:
 ## Trial data
 
 Seeking feedback.
+
+API client
+Realtime model.
 
 
 ## == ROUGH NOTES BEYOND THIS LINE ==

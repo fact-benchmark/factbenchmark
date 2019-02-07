@@ -14,8 +14,8 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: Members
-        url: '/members' 
+        content: Roadmap
+        url: '/roadmap' 
     next:
         content: Back Home
         url: '/' 

@@ -65,13 +65,15 @@ Finally, there is a read only end point that provides access to data in flattene
 
 ## Inviting feedback
 
-We are currently seeking feedback on many aspects of this project but especially the design of this API. Given our desire to support and facilitate research in this areas we would appreciate feedback from our member organisations on points major or minor. We are doing this via the hypothesis.is annotation tool. If you have thoughts about any aspects of this site please feel free to select any text on this page and use the tool to add your comments. Alternativelly feedback can be provided by email to: feedback@factbenchmark.org
+We are currently seeking feedback on many aspects of this project but especially the design of this API. 
+
+Given our desire to support and facilitate research in this areas we would appreciate feedback from our member organisations on points major or minor. We are doing this via the hypothesis.is annotation tool. If you have thoughts about any aspects of this API please feel free to select any text on this page and use the tool to add your comments. Alternativelly feedback can be provided by email to: <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>
 
 ## REST API
 
 ### Claim 
 
-A claim is a short statement which should be falsifiable and of general interest (important).
+A claim is a short statement which should be falsifiable and of general interest.
 
 **To be regarded as check worthy a claim should be 'falsifiable', in that it:**
 * is phrased in a non-ambiguous way
@@ -88,7 +90,6 @@ A claim is a short statement which should be falsifiable and of general interest
 The ```claim_text``` is the definitive text that should be evaluated for truth or falsity. It doesn't *necessarily* exactly match the text from the source (if any), but should be close to it. 
 
 The ```timestamp``` is the time of attribution to the original claim (if any) 
-
 
 Example (with expansion of the evidence/attribution)
 ```json
@@ -413,4 +414,4 @@ We may build a GraphQL front end on top of the read-only aspects of this API (es
 
 --
 
-If you have any further thoughts about the design of this API we invite our member organizations to please contact us at feedback@factbenchmark.org 
+If you have any further thoughts about the design of this API we invite our member organizations to please contact us at info@factbenchmark.org

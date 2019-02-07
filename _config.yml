@@ -8,7 +8,9 @@ doks:
             text: Realtime Fact Benchmark
             image: false
         nav:
-            - item_name: Docs
+            - item_name: Intro
+              item_url: '/how'
+            - item_name: API Docs
               item_url: '/documentation'
             - item_name: Manifesto
               item_url: '/manifesto'
