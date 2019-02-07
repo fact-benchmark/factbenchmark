@@ -250,17 +250,7 @@ This JSON will be stored (and, by default returned) as a content-hash, like this
 
 One use for the annotations field may be to indicate groups of related claims, but the schema and mechanism for this remains to be determined.
 
-#### 24Hr Time Delay
-
-Claim-responses, like all data, eventually become available to all members of the benchmark. However, to ensure independence of submissions, detailed claim-responses are not available to other agents, until after a 24hr time delay.
-
-Annotations can be placed under the following categories on each claim.
-- Attribution
-- Related claims
-- Evidence (Not supported)
-- Evidence (Supporting)
-
-### Benchmark
+### Benchmark and scoring
 
 A benchmark consists of a set of check_worthy claims chosen by some objective criteria. 
 
@@ -344,7 +334,6 @@ It is also possible to request that content be retrieved by the server, timestam
 The mime-type hash-html should be treated in a special way. When retrieving content of this type any URLs of the form "hash:xxxx" can be de-referenced by recursive requests to this end-point to retrieve the associated content for that hash, along with the corresponding mime-type. 
 
 ## Cross cutting concerns 
-
 
 #### 24Hr Time Delay
 
