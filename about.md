@@ -23,11 +23,8 @@ It is our hope that by furthering research in the area of this project we can id
 
 ## Who we are
 
-<<<<<<< HEAD
-=======
 The team at FactBenchmark is a diverse group not all of whom are listed here. Notwithstanding that, some key persons include: 
 
->>>>>>> 1b446a0478ca315af2a310b90eeaf92d305000c9
 **Linc Gasking**
 
 Linc is a successful entrepreneur and award winning photographer, TEDx speaker and community builder. He initiated the <a href="http://www.opensourceopensociety.com/">Open Source Open Society conference</a> and was <a href="https://futureofstorytelling.org/speaker/linc-gasking">co-founding CEO</a> of hologram company 8i.
