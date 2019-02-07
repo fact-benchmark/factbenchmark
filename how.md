@@ -34,7 +34,7 @@ As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark i
 In the <a href="http://www.fakenewschallenge.org/#faq">FAQ for Fake News Challenge</a> they write that truth labeling poses several challenges:
 
 <ul class="quote">
-<li>There exists very little labeled training data of fake vs. real news stories.</li>
+<li>There exists very little labeled training data of fake versus real news stories.</li>
 <li>The data that does exist is almost all copyright protected.</li>
 <li>The data that does exist is extremely diverse and unstructured, making hard to train on.</li>
 <li>Any dataset containing claims with associated “truth” labels is going to be contested as biased.</li>
@@ -44,7 +44,7 @@ It is our intention to address all four of these challenges by providing a unbia
 
 We wish to acknowledge the great work already done in the area of 'fake news benchmarks' - such as the <a href="https://www.cs.ucsb.edu/~william/software.html">LIAR</a> benchmark dataset,  the work done by <a href="http://fever.ai/">fever.ai</a>, <a href="https://idir-server2.uta.edu/claimbuster/">claimbuster</a>, <a href="http://www.fakenewschallenge.org">fakenewschallenge.org</a> and the many others who have been working on the problem of creating research and benchmark data sets - many of whom we are proud to have as members. 
 
-It is our hope that, together, we can extend and build on this existing work with this real-time shared opendata benchmark.
+It is our hope that, together, we can extend and build on this existing work with this real-time shared open data benchmark.
 
 ### Leaderboards 
 
@@ -56,7 +56,7 @@ Scoring high on either leaderboard requires both timeliness and 'accuracy'. Spec
 
 Because the current expected value or 'consensus' regarding the veracity or check worthiness of any given claim updates over time, the corresponding points awarded for that item can also change over time. (Benchmarks place an arbitrary time limit around this so as to provide a clear and publishable benchmark, however).
 
-A claim goes through various stages as it moves through the system. On this page we outline the lifecycle of a claim, which will also help describe the overall system in more detail. 
+A claim goes through various stages as it moves through the system. On this page we outline the life cycle of a claim, which will also help describe the overall system in more detail. 
 
 First, let's define our terms.
 
@@ -64,7 +64,7 @@ First, let's define our terms.
 
 #### Agent 
 
-Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself also has its own agent, so that any data entered by Factbenchmark is clearly marked as such. All data in the system (including scoring) is attributable to the agent that submitted it or calculated it. 
+Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself also has its own agent, so that any data entered by FactBenchmark is clearly marked as such. All data in the system (including scoring) is attributable to the agent that submitted it or calculated it. 
 
 #### Claims.
 
@@ -82,9 +82,9 @@ Check-worthy claims are evaluated by agents for veracity - they are either 'true
 
 A benchmark collects together a set of claims that need to be evaluated, and puts a boundary on when the reputation is updated (the scores on the leaderboard at end of the benchmark is considered to be the 'outcome' of the benchmark).
 
-## Typical claim lifecycle 
+## Typical claim life cycle 
 
-It should be noted that while it is the intention of this project to allow and even encourage automation, some of these steps require a degree of human curation and judgement. Where needed during the trial, "FactBenchmark" as a project is commited to provide human resourcing (with appropriate level of indepdence and skills) to ensure that the steps will flow through correctly.
+It should be noted that while it is the intention of this project to allow and even encourage automation, some of these steps require a degree of human curation and judgement. Where needed during the trial, "FactBenchmark" as a project is committed to provide human resourcing (with appropriate level of independence and skills) to ensure that the steps will flow through correctly.
 
 For each claim, the steps of the processing are as follows:
 
@@ -94,7 +94,7 @@ It is expected that claims will generally be 'found in the wild'.  This may invo
 
 #### 2. Phrasing.
 
-Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of its source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsfiability'.
+Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of its source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsifiability'.
 
 #### 3. Submission. 
 
@@ -119,7 +119,7 @@ Agents can also post 'responses' to claims at any time. Responses can include th
 - 'check-worthy' ('decline to rate', 'better options exist' or 'importance')
 - 'truth-rating' (actual estimate of validity)
 
-A "decline to evaluate" response is used when the agent believes the claim is poorly formed, does not have sufficient falsifiability or is not of general interest. Agents are encouraged but not required to provide reasons for a 'decline to evaluate' call. Reasons provided may provide useful feedack for others however.
+A "decline to evaluate" response is used when the agent believes the claim is poorly formed, does not have sufficient falsifiability or is not of general interest. Agents are encouraged but not required to provide reasons for a 'decline to evaluate' call. Reasons provided may provide useful feedback for others however.
 
 Alternatively a claim can be rated as 'check-worthy', and, if desired an 'importance' weighting can be provided.
 
@@ -139,7 +139,7 @@ Based on feedback we decided to go for a simple model here. Claims can either be
 
 #### 8. Annotation for validity and support. 
 
-Agents may choose to provide annotations that provide support for falsity or truth of the statement. In fact they can pretty much share any anotations they like against the claim. 
+Agents may choose to provide annotations that provide support for falsity or truth of the statement. In fact they can pretty much share any annotations they like against the claim. 
 
 That said it is not the intention of the benchmark to attempt to provide comprehensive tools in this space, as a number of very good tools already exist. As a result we expect that many annotations will merely be pointers to other places with useful information. 
 
@@ -148,7 +148,7 @@ That said it is not the intention of the benchmark to attempt to provide compreh
 
 Calculations for agent reputation are a key part of the system, explained in more detail on the <a href="/model/">model</a> page. The key point to understand is that the reputation is based on the difference between how unlikely the response was at the time it was made and how unlikely it is 'now'. 
 
-A response corresponding to the current consensus has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at the time). The precise caculation involves calculating the wasserstein metric but the key equation is 
+A response corresponding to the current consensus has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at the time). The precise calculation involves calculating the Wasserstein metric but the key equation is 
 reputation =  shift * tan(innovation / accuracy)
 
 That is, the expected likelihood of a given response, given the current consensus estimate for 'truthiness' is compared with the expected likelihood of the given response at the time that the response was given. 

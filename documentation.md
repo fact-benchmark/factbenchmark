@@ -10,7 +10,7 @@ micro_nav: true
 # Hero section
 
 title: API Documentation (WIP)
-description: The API aims to provide access to an independent, collective, shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime factchecking.
+description: The API aims to provide access to an independent, collective, shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime fact checking.
 
 # Page navigation
 page_nav:
@@ -27,7 +27,7 @@ page_nav:
 
 ## Intro
 
-The API aims to provide access to a shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime factchecking.
+The API aims to provide access to a shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime fact checking.
 
 As a design goal, where-ever possible the data available via the API is designed to be immutable, non-revokable, timestamped, independently verifiable (signed) and trustless. This design constraint supports our future design goals as well as our data transparency objectives.
 
@@ -224,9 +224,9 @@ Or:
 
 Another form of response to a claim is an annotation.
 
-Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped, which can allow the agents to store their own data, and make their own intepretations. (In such cases the "FactBenchmark" service acts a little like a simple block chain - only without the block or the chain).
+Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped, which can allow the agents to store their own data, and make their own interpretations. (In such cases the "FactBenchmark" service acts a little like a simple block chain - only without the block or the chain).
 
-Arbitrary json can be posted in an annotation, for instance:
+Arbitrary JSON can be posted in an annotation, for instance:
 
 ```json
 { 
@@ -237,7 +237,7 @@ Arbitrary json can be posted in an annotation, for instance:
 } 
 ```
 
-This json will be stored (and, by default returned) as a content-hash, like this:
+This JSON will be stored (and, by default returned) as a content-hash, like this:
 
 ```json
 { 
@@ -248,7 +248,7 @@ This json will be stored (and, by default returned) as a content-hash, like this
 } 
 ```
 
-One use for the annotations field may be to indicate groups of related claims, but the schama and mechanism for this remains to be determined.
+One use for the annotations field may be to indicate groups of related claims, but the schema and mechanism for this remains to be determined.
 
 #### 24Hr Time Delay
 
@@ -306,7 +306,7 @@ For transparency, (almost) every piece of data in the API is attached to an agen
 
 ### Content (Content Cache)
 
-In order to allow and sharing of associated data against claims an end point exists for posting arbitrary data. This data is retrieved by a content-hash of the concetenation of mime-type and data field (not including the submitted_by etc data). If two agents post the same data the content will only be stored once, using the first submission. 
+In order to allow and sharing of associated data against claims an end point exists for posting arbitrary data. This data is retrieved by a content-hash of the concatenation of mime-type and data field (not including the submitted_by etc data). If two agents post the same data the content will only be stored once, using the first submission. 
 
 ```json
 {
@@ -333,7 +333,7 @@ It is also possible to request that content be retrieved by the server, timestam
 }
 ```
 
-The mime-type hash-html should be treated in a special way. When retrieving content of this type any urls or hrefs of the form "hash:xxxx" can be de-referenced by recursive requests to this end-point to retrieve the associated content for that hash, along with the corresponding mime-type. 
+The mime-type hash-html should be treated in a special way. When retrieving content of this type any URLs of the form "hash:xxxx" can be de-referenced by recursive requests to this end-point to retrieve the associated content for that hash, along with the corresponding mime-type. 
 
 ## Cross cutting concerns 
 
@@ -377,7 +377,7 @@ To do this, while still allow graceful handling of errors we have a hidden log, 
 
 All end points, by default, hide data with a hidden log entry.
 
-For now, hidden log entries will only be accepted by the user with the corresponding submitted_by reference or by a special factbenchmark admin user.
+For now, hidden log entries will only be accepted by the user with the corresponding submitted_by reference or by a special FactBenchmark admin user.
 
 ```json
 {

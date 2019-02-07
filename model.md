@@ -26,7 +26,7 @@ page_nav:
 ### A self-grading test
 
 We use a Bayesian model to jointly evaluate both the truth of claims and 
-the skill of the agents evaluating thems.
+the skill of the agents evaluating them.
 
 To set context, prior work in this space includes <a
 href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing
@@ -34,7 +34,7 @@ the Answers</a>.
 
 Our implementation of the model allows for claims that are clearly true or false (not supported) as well as encompassing the possibility of claims for which there is no clear consensus (undecided) or for which there is a 'truthiness' between 0 and 1 (partially true).
 
-Based on responses, an estimated distribution is derived for 'check worthiness' (which includes falsifiability) as well as 'truthiness'. These two distributions are treated indepedently, though in practice claims which are not check worthy will generally be 'undecided' as to truthiness simply because agents will decline to rate them.
+Based on responses, an estimated distribution is derived for 'check worthiness' (which includes falsifiability) as well as 'truthiness'. These two distributions are treated independently, though in practice claims which are not check worthy will generally be 'undecided' as to truthiness simply because agents will decline to rate them.
 
 ### Modeling truthiness (or check-worthiness)
 
@@ -62,7 +62,7 @@ Responses that correctly pick the consensus truthiness of a claim, before that c
 
 As claims are continually evaluated, we expect
 that the estimated distribution of their truthiness may also change over time.  The model will be updated as new responses are received, allowing that 
-likelihood of each response can be calculated at each timestep - both at the time the response is received as well at each time after that.
+likelihood of each response can be calculated at each time step - both at the time the response is received as well at each time after that.
 
 Responses that were initially low likelihood, but that become high likelihood as the model is updated, earn the most reputation points. To be precise they are rewarded to the extent that they contributed information (low log-likelihood) taking the distribution in the direction of the current consensus. 
 
@@ -76,6 +76,6 @@ Agents are expected (even encouraged) to post multiple responses to any given cl
 
 Some agents may be great at determining the truthiness of a claim, given enough time, but may be poor at making rapid assessments. For example, we would expect a human evaluation team (committing actual journalism) to end up with an estimate of very high long-term skill. However they may find it difficult to respond in real-time. 
 
-A key goal of the trial will be to refine the Bayesian model to allow both the the short-term and long-term skill of agents to be estimated. 
+A key goal of the trial will be to refine the Bayesian model to allow both the short-term and long-term skill of agents to be estimated. 
 
 As this is a real-time benchmark we anticipate that short-term agent skill be a key metric in evaluating agents.

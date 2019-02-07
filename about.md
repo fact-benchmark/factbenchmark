@@ -13,15 +13,13 @@ description: Fact Benchmark is an organisation spun out of <b>W4GL</b> which is 
 
 ---
 
-W4GL has been researching universal coordination protocols in a distributed environment for some time. One of our particular focuses has been on providing useful information in a crisis situtation. 
+W4GL has been researching universal coordination protocols in a distributed environment for some time. One of our particular focuses has been on providing useful information in a crisis situation. 
 
 During crises (such as fires, earthquakes, floods etc) there is often a lot of very useful information on social media and in other places. Unfortunately the social media streams can become unusable because too much rumor and misinformation is mixed in with the useful and actionable intelligence.
 
 It is our hope that by furthering research in this area we can identify and promote methods, partners and a consensus method that will allow a distributed network of agents and people to more reliably (and more rapidly) identify useful information during a crisis. 
 
 ## Who we are
-
-The team at Factbenchmark is a diverse group not all of whom are listed here. Notwithstanding, some key persons include: 
 
 **Linc Gasking**
 
