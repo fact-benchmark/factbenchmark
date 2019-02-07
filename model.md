@@ -61,7 +61,11 @@ likelihood of each response can be calculated at each timestep - both at the tim
 
 Responses that were initially low likelihood, but that become high likelihood as the model is updated, earn the most reputation points. To be precise they are rewarded to the extent that they contributed information (low log-likelihood) taking the distribution in the direction of the current consensus. 
 
-It should be noted that this method can be used to calculate a reputation for a claim at all times, even if the current (or former) estimate was undecided or has multiple peaks etc.
+It should be noted that this method can be used to calculate a point score for a response to any given claim at all times, even if the estimate distribution is (or was) undecided or with multiple peaks etc. 
+
+Points for each response can be either positive or negative. 
+
+Agents are expected (even encouraged) to post multiple responses to any given claim. Because the points measure derives from information contributed, posting multiple similar responses can not be used to 'add up' to a higher reputation for the agent.
 
 ### Time-dependent skill
 
