@@ -38,7 +38,6 @@ Given that objective the following are our <b>agreed</b> guiding principles :
 * All data submitted to the benchmark will be made freely available to all interested researchers in perpetuity (though sometimes after a brief, reasonable, embargo period).
 * Whenever possible, data must be clearly sourced and retain its sourcing during processing. 
 * Data is never deleted, though sometimes it can be marked hidden. Hidden data remains in the archive.
-* If financial suppport becomes available, FactBenchmark is committed to revenue sharing with its member organizations in a reasonable and transparent way so as to recognize fairly any organizations that have contributed value to the solution.
 * FactBenchmark will not, itself,make value judgements as to truthiness or relevancy excepting that when it does it will clearly mark data as such, and in such cases utilize the same api, under the same rules and business logic, as other agents interacting with the benchmark. 
 * If judgement calls are required, FactBenchmark will aim to consult with the founding members of FactBenchmark and make decisions that support the overall objective of the project, as outlined above.
 * We are committed to releasing the code for this project as open source. 
