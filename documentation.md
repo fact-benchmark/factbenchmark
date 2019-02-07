@@ -9,21 +9,21 @@ micro_nav: true
 
 # Hero section
 
-title: API Documentation (WIP)
+title: Documentation
 description: The API aims to provide access to an independent, collective, shared data resource whereby researchers working in the field can collaborate to push the state of the art in realtime factchecking.
 
 # Page navigation
 page_nav:
     prev:
-        content: Modeling Truthiness
-        url: '/model'
+        content: Alpha phase trial
+        url: '/trial'
     next:
-        content: Roadmap
-        url: '/roadmap'
+        content: Manifesto
+        url: '/manifesto'
 ---
 
 
-# Fact Benchmark API (v0.5)
+# Fact Benchmark API
 
 ## Intro
 
