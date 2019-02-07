@@ -50,6 +50,12 @@ Our current approach is to use a beta-regression model, with hidden variables fo
 
 A precise definition of the model we are using can be found by reading the explanation and the code at our <a href="https://github.com/factbenchmark/reality-reliability">github repository</a>. That said, as data are received, we expect the model to be refined. 
 
+![Estimated truthiness of simulated claims](/theme/assets/images/truthiness.png)
+Estimated truthiness of claims, based on a model of simulated data. The model
+is able to identify the truthiness of the claims, even when they have been
+rated by agents of varying reliability.
+
+
 ### Rewarding unlikely responses
 
 Responses that correctly pick the consensus truthiness of a claim, before that consensus is established, will be rewarded. 
