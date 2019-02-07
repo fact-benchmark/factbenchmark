@@ -50,7 +50,7 @@ grid_navigation:
       url: 'trial' 
 
     - title: Modeling truthiness
-      excerpt: Our practical, bayesian approach
+      excerpt: Our practical, Bayesian approach
       cta: Read more
       url: 'model' 
 

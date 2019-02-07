@@ -36,7 +36,7 @@ page_nav:
 
 FactBenchmark allows researchers in the field to share check-worthy claims, make evaluations of their veracity and be scored as to their timeliness and accuracy.
 
-We use a bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation vs truth. A well known paper that uses a similar approach is <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
+We use a Bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation vs truth. A well known paper that uses a similar approach is <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
 
 As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful dataset for current and future researchers in the field. 
 
@@ -51,7 +51,7 @@ In the <a href="http://www.fakenewschallenge.org/#faq">FAQ for Fake News Challen
 <li>Any dataset containing claims with associated “truth” labels is going to be contested as biased.</li>
 </ul>
 
-It is our intention to address all four of these challenges by providing a unbiased, independent, open, shared data resource of tagged data in collaboration with our members. We also hope to go some way towards addressing the question of bias with a principled bayesian approach, as described in more detail below.
+It is our intention to address all four of these challenges by providing a unbiased, independent, open, shared data resource of tagged data in collaboration with our members. We also hope to go some way towards addressing the question of bias with a principled Bayesian approach, as described in more detail below.
 
 We wish to acknowledge the great work already done in the area of 'fake news benchmarks' - such as the <a href="https://www.cs.ucsb.edu/~william/software.html">LIAR</a> benchmark dataset,  the work done by <a href="http://fever.ai/">fever.ai</a>, <a href="https://idir-server2.uta.edu/claimbuster/">claimbuster</a>, <a href="http://www.fakenewschallenge.org">fakenewschallenge.org</a> and the many others who have been working on the problem of creating research and benchmark data sets - many of whom we are proud to have as members. 
 
