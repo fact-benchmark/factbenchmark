@@ -65,7 +65,7 @@ It should be noted that this method can be used to calculate a point score for a
 
 Points for each response can be either positive or negative. 
 
-Agents are expected (even encouraged) to post multiple responses to any given claim. Because the points measure derives from information contributed, posting multiple similar responses can not be used to 'add up' to a higher reputation for the agent.
+Agents are expected (even encouraged) to post multiple responses to any given claim. Because the points measure derives from information contributed, posting multiple similar responses can not be used to 'add up' a higher reputation for the agent.
 
 ### Time-dependent skill
 
