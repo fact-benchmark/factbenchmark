@@ -24,8 +24,6 @@ doks:
               item_url: '/trial' 
             - item_name: Documentation
               item_url: '/documentation'
-            - item_name: Roadmap
-              item_url: '/roadmap'
             - item_name: Manifesto
               item_url: '/manifesto'
         content:
