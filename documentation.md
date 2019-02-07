@@ -248,19 +248,17 @@ This JSON will be stored (and, by default returned) as a content-hash, like this
 } 
 ```
 
-<<<<<<< HEAD
 One use for the annotations field may be to indicate groups of related claims, but the schema and mechanism for this remains to be determined.
 
 #### 24Hr Time Delay
 
 Claim-responses, like all data, eventually become available to all members of the benchmark. However, to ensure independence of submissions, detailed claim-responses are not available to other agents, until after a 24hr time delay.
-=======
+
 Annotations can be placed under the following categories on each claim.
 - Attribution
 - Related claims
 - Evidence (Not supported)
 - Evidence (Supporting)
->>>>>>> 1b446a0478ca315af2a310b90eeaf92d305000c9
 
 ### Benchmark
 
@@ -388,15 +386,13 @@ As part of our guiding principles we aim to:
 - not delete any data
 - follow a CRDT approach, generally.
 
-<<<<<<< HEAD
 To do this, while still allow graceful handling of errors we have a hidden log, with values like the following. 
 
 All end points, by default, hide data with a hidden log entry.
 
 For now, hidden log entries will only be accepted by the user with the corresponding submitted_by reference or by a special FactBenchmark admin user.
-=======
+
 As a safety valve, however, _some_ facility for handling unexpected problems is provided by the 'hidden' log, with values like the following. 
->>>>>>> 1b446a0478ca315af2a310b90eeaf92d305000c9
 
 ```json
 {
