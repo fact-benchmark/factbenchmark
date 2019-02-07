@@ -13,12 +13,9 @@ micro_nav: true
 
 # Page navigation
 page_nav:
-    prev:
-        content: Home
-        url: '/' 
     next:
-        content: Join our alpha
-        url: '/trial'
+        content: Model
+        url: '/model'
 
 ---
 

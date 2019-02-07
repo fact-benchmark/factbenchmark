@@ -26,33 +26,21 @@ features:
     - title: Find check-worthy claims 
       icon-class: fab fa-searchengin
       excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the general public.
+      url: 'how' 
     - title: Estimate validity
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
+      url: 'model' 
     - title: Realtime benchmark
       icon-class: mi mi-Settings fact-spinner
-      excerpt: Earn reputation for your system by making correct, early, estimates of the future <a href="../model">consensus.</a>  
+      excerpt: Join our alpha benchmark trial.
+      url: 'trial' 
 
    
 
 
 # Grid navigation
 grid_navigation:
-
-    - title: How it works
-      excerpt: What the Realtime Fact Benchmark is and how it works
-      cta: Read more
-      url: 'how' 
-
-    - title: Alpha trial 
-      excerpt: Be part of our alpha trial
-      cta: Read more
-      url: 'trial' 
-
-    - title: Modeling truthiness
-      excerpt: Our practical, Bayesian approach
-      cta: Read more
-      url: 'model' 
 
     - title: Documentation 
       excerpt: API documentation (narrative form)
@@ -87,4 +75,19 @@ live_navigation:
       excerpt: Our founding member organisations
       cta: Read more
       url: 'members' 
- -->
+-->
+<!-- 
+- title: How it works
+  excerpt: What the Realtime Fact Benchmark is and how it works
+  cta: Read more
+  url: 'how' 
+
+- title: Alpha trial 
+  excerpt: Be part of our alpha trial
+  cta: Read more
+  url: 'trial' 
+
+- title: Modeling truthiness
+  excerpt: Our practical, Bayesian approach
+  cta: Read more
+  url: 'model'  -->

@@ -5,7 +5,7 @@ keywords:
 comments: false
 
 # Hero section
-title: The alpha trial
+title: Alpha phase trial
 description: We are looking for a limited number of interested parties to take part in our alpha phase trial - which will take place in March 2019.
 
 # Micro navigation
@@ -14,11 +14,11 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: How it works
-        url: '/how'
-    next:
         content: Modeling truthiness
         url: '/model'
+    next:
+        content: Documentation
+        url: '/Documentation'
 ---
 
 # Alpha phase trial
@@ -59,7 +59,7 @@ To <a href="https://en.wikiquote.org/wiki/Helmuth_von_Moltke_the_Elder">misquote
 
 We sincerely hope that your organisation will be interested in helping to classify a few claims per day.
 
-To express your interest please email us at <
+To express your interest please email us at <a href="mailto:info@factbenchmark.org">factbenchmark.org</a>.
 
 <!-- Contact form approach - it works but yeah... naj
  --><!-- <form action="https://www.formingo.co/submit/84d4c621-2c55-4998-80cd-e11cce3ad064"

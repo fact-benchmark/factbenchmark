@@ -66,16 +66,22 @@
 	<section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
-        	{% for feature in page.features %}
+          {% for feature in page.features %}
           
           <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                <div class="features-icons-icon d-flex">
-                 	<i class="{{ feature.icon-class }}"></i>
-                </div>
-				<h3>{{ feature.title }}</h3>
-				<p  class="lead mb-0">{{ feature.excerpt }}</p>
-            </div>
+
+          	<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ feature.url }}">
+
+	            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+	                <div class="features-icons-icon d-flex">
+	                 	<i class="{{ feature.icon-class }}"></i>
+	                </div>
+					<h3>{{ feature.title }}</h3>
+					<p  class="lead mb-0">{{ feature.excerpt }}</p>
+	            </div>
+
+	        </a>
+	        
           </div>
           {% endfor %}
         </div>

@@ -15,13 +15,12 @@ description: >
 # Page navigation
 page_nav:
     prev:
+        content: How it works
+        url: '/how'
+    next:
         content: Join our alpha trial
         url: '/trial'
-    next:
-        content: Documentation
-        url: '/documentation'
 ---
-
 
 
 ### A self-grading test
