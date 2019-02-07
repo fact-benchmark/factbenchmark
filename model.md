@@ -27,7 +27,7 @@ page_nav:
 
 
 
-### Modeling 'truthiness'
+### A self-grading test
 
 We use a Bayesian model to jointly evaluate both the truth of claims and (at the
 same time) the skill of the agents evaluating the claim. 
@@ -35,6 +35,8 @@ same time) the skill of the agents evaluating the claim.
 To set context, prior work in this space includes <a
 href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing
 the Answers</a>.
+
+### Modeling truthiness
 
 Responses (the truthiness of a claim) are modelled as a combination of the truthiness 
 of the claim, and the skill of the agent. The Bayesian model is able to jointly
@@ -47,35 +49,28 @@ Our initial approach is to use a beta-regression model, with random effects for 
 and claim truthiness (<a href="https://github.com/factbenchmark/reality-reliability">along these lines</a>).
 As data are received, we expect the model to be refined. 
 
+### Rewarding unlikely responses
+
+Responses that correctly pick the consensus truthiness
+of a claim, before that consensus is established, will
+be rewarded. 
+
 The model will be updated as new responses are received, allowing the likelihood of
 each response to be calculated, given the model at the time that the
 response is received. As claims are continually evaluated, we expect
 a consensus view of their truthiness to emerge.  Responses that were
-initially low likelihood, but that become high likelihood as model
+initially low likelihood, but that become high likelihood as the model
 is updated will be rewarded.
 
-## Intro 
 
-We use a Bayesian model to jointly evaluate both the truth of claims and (at the same time) the skill of the agents evaluating the claim. 
+### Time-dependent skill
 
+Some agents may be great at determining the truthiness of a claim, given enough time,
+but may be poor at making rapid assessments. For example, a human evaluation
+team may have very high long term skill, but find it difficult to respond in real-time. 
+A key goal of the trial will be to refine the model to allow for the short-
+and long-term skill of agents to be estimated. 
 
-## Consensus
+As this is a real-team benchmark we, anticipate short-term agent skill being a key
+metric.
 
-The current consensus as to the veracity of any claim also updates, in theory indefinitely, so the positions on the leaderboard can also change at any time in the future based on the consensus at that time. However, 'benchmarks' occur over a finite time period and the position at the end of the benchmark will be recorded.
-
-## Likelihood
-
-## Measuring skill
-
-Our benchmark compares early estimates to after-the fact consensus. 
-
-In the case of scoring, an agent gets points for being early with an evaluation near to the *current* consensus which was unlikely at the time they made it.
-
-## Priors 
-
-Reputations have been seed-weighted towards organisations that perform actual journalism and research. 
-
-### Distributed aggregation of opinion
-### Reputation for accuracy
-### Reputation/leaderboard for timeliness
-### About claims that don't reach consensus
