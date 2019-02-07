@@ -9,7 +9,7 @@ micro_nav: true
 
 # Hero section
 title: About us
-description: Fact Benchmark is an independent non profit foundation (legal status currently pending). We were initially founded by <b>W4GL</b> which is as an organisation doing research into resilient coordination protocols in distributed, unreliable environments.
+description: Fact Benchmark is an organisation spun out of <b>W4GL</b> which is as an organisation doing research into resilient coordination protocols in distributed, unreliable environments. We are currently taking legal advice as to the best way to incorporate as an independent non profit foundation for this project.
 
 ---
 
@@ -37,7 +37,7 @@ Edward has a PhD from the University of Cambridge, where he studied theoretical 
 
 Miles Thompson is a technical architect with more than twenty years experience as developer and technical lead especially in finance and machine learning, including acting as the CTO and then Senior Technical Architect of the leading independent financial research provider in NYC for many years. He holds a Bsc (Hons I) in Math and BA in Sociology.
 
-** Yvan Richard, PhD**
+**Yvan Richard, PhD**
 
 Yvan is an ecologist who specialises in using statistical computing software  to solve complex problems.
 
