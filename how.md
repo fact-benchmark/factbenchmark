@@ -66,19 +66,19 @@ First, let's define our terms.
 
 Our name for accounts on this system. Usually each institution having access to the benchmark will have one agent. FactBenchmark itself also has its own agent, so that any data entered by Factbenchmark is clearly marked as such. All data in the system (including scoring) is attributable to the agent that submitted it or calculated it. 
 
-#### Claims.
+#### Claims
 
 Our name for statements, rumors or quotes that are being evaluated for 'check-worthiness' and 'truthiness' (or veracity).
 
-#### Check worthy.
+#### Check-worthiness
 
 The requirements for a claim to be check worthy, are that it is "falsifiable" and "of general interest" as outlined in more detail on the <a href="/documentation/">documentation</a> page.
 
-#### Validity.
+#### Truthiness
 
-Check-worthy claims are evaluated by agents for veracity - they are either 'true', 'false', or 'mixed' as outlined in more detail on the <a href="/documentation/">documentation</a> page. A claim may also be not yet evaluated, not check-worthy, or of indeterminate veracity.
+Check-worthy claims can then be evaluated by agents for veracity - they are either 'true', 'false', or 'partially true' as outlined in more detail on the <a href="/model/">model</a> page. A claim may also be 'not yet evaluated', not check-worthy, or of 'indeterminate veracity'.
 
-#### Benchmark. 
+#### Benchmark 
 
 A benchmark collects together a set of claims that need to be evaluated, and puts a boundary on when the reputation is updated (the scores on the leaderboard at end of the benchmark is considered to be the 'outcome' of the benchmark).
 
@@ -92,11 +92,11 @@ For each claim, the steps of the processing are as follows:
 
 It is expected that claims will generally be 'found in the wild'.  This may involve detecting a spike of social media activity around a particular rumour and finding a representative tweet for that rumor. Or it may involve parsing a speech from a prominent figure and finding check worthy claims that they make. We expect almost all claims to have one or more supporting sources listed in their 'evidence' by way of reaching the threshold for 'general interest'.
 
-#### 2. Phrasing.
+#### 2. Phrasing
 
 Even though claims should ideally have at least one identifiable source it can be hard to find a specific quote with the ideal phrasing for 'falsifiability'. For that reason we allow that a claim 'text' may not exactly match any of its source evidence. It should carry the same basic meaning, or neatly summarize the rumor in such a way as to achieve the threshold for 'falsfiability'.
 
-#### 3. Submission. 
+#### 3. Submission
 
 Any agent can submit a claim for review at any time. To ensure a sufficient number of check-worthy claims are available for the first benchmarks, FactBenchmark itself will ensure that staff are available to provide a degree of hand curation and discovery of claims if needed. These will be submitted to the system in the same way as any other agent.
 
@@ -125,30 +125,24 @@ Alternatively a claim can be rated as 'check-worthy', and, if desired an 'import
 
 Finally a 'better options exist' response is used to indicate that, while this claim is check-worthy there is another claim - that is substantially similar - that is already in existence, that has better phrasing or that in some other way has better support. In such a case the agent may choose to respond with a 'better options exist' response on the less important claim. The precise definition of 'substantially similar' is deliberately left somewhat loose at this time. Flagging a claim as 'related' or 'duplicate' does not in any way stop that claim from being evaluated for check-worthiness or validity. However some effort may be put into ensuring that benchmarks do not include too many claims that are 'substantially similar' to each other.
 
-#### 6. Acceptance into benchmark. 
+#### 6. Acceptance into benchmark
 
 In order to avoid unnecessary work by agents, claims are added to a benchmark only once they reach a threshold for 'check-worthiness' required by that benchmark (or more specifically, reach the maximum likelihood estimate for check-worthiness  - as described on the <a href="/model/">model</a> page). These claims will then be available under the API end point for that benchmark. Acceptance into benchmark may also trigger notifications. 
 
 Responses with "truth-rating" estimates are accepted at any time, but for calculation of leaderboard purposes responses received before acceptance will be considered to have been made at the time of acceptance. 
 
-#### 7. Evaluation for validity. 
+#### 7. Evaluation for 'truthiness'
 
 Responses to claims can contain a 'truth-rating'.
 
 Based on feedback we decided to go for a simple model here. Claims can either be classified as 'true', 'false', or 'partially true'. Partially true claims can have a number included, indicating the amount of truth. This should be interpreted as the amount of truth in the claim, as in 50% true, not the confidence of the agent in the truth of the claim. "Liar liar pants on fire" would correspond to a low truthiness value, whereas "Pinocchio" would correspond to a higher truth value. 
 
-#### 8. Annotation for validity and support. 
+#### 8. Annotation for validity and support
 
 Agents may choose to provide annotations that provide support for falsity or truth of the statement. In fact they can pretty much share any anotations they like against the claim. 
 
 That said it is not the intention of the benchmark to attempt to provide comprehensive tools in this space, as a number of very good tools already exist. As a result we expect that many annotations will merely be pointers to other places with useful information. 
 
-
-#### 9. Benchmark leaderboard.
+#### 9. Benchmarks and the leaderboard
 
 Calculations for agent reputation are a key part of the system, explained in more detail on the <a href="/model/">model</a> page. The key point to understand is that the reputation is based on the difference between how unlikely the response was at the time it was made and how unlikely it is 'now'. 
-
-A response corresponding to the current consensus has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at the time). The precise caculation involves calculating the wasserstein metric but the key equation is 
-reputation =  shift * tan(innovation / accuracy)
-
-That is, the expected likelihood of a given response, given the current consensus estimate for 'truthiness' is compared with the expected likelihood of the given response at the time that the response was given. 
