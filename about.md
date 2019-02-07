@@ -9,18 +9,38 @@ micro_nav: true
 
 # Hero section
 title: About us
-description: Fact Benchmark is an independent non profit foundation spin off initially founded by <b>w4gl</b> - as an organisation doing research into resilient coordination protocols in distributed, unreliable environments.
-
+description: Fact Benchmark is an independent non profit foundation (legal status currently pending). We were initially founded by <b>W4GL</b> which is as an organisation doing research into resilient coordination protocols in distributed, unreliable environments.
 
 ---
 
-We have been researching universal coordination protocols in a distributed environment.
+W4GL has been researching universal coordination protocols in a distributed environment for some time. One of our particular focuses has been on providing useful information in a crisis situtation. 
 
-One of our focuses has been on providing useful information in a crisis situtation. 
+During crises (such as fires, earthquakes, floods etc) there is often a lot of very useful information on social media and in other places. Unfortunately the social media streams can become unusable because too much rumor and misinformation is mixed in with the useful and actionable intelligence.
 
-During crises (such as fires, earthquakes) there is often a lot of very useful information on social media. Unfortunately the social media streams are often made much less helpful because of the rumours and mis-information (intentional or unintentional) which gets mixed in with the useful information being shared on social media.
+It is our hope that by furthering research in this area we can identify and promote methods, partners and a consensus method that will allow a distributed network of agents and people to more reliably (and more rapidly) identify useful information during a crisis. 
 
-It is our hope that by furthering research in this area we can identify methods, partners and an aggregated consensus method that will ultimately lead to methods for a distributed network of agents and people to more reliably (and more rapidly) identify useful information from social media during a crisis. 
+## Who we are
 
+The team at Factbenchmark is a diverse group not all of whom are listed here. Notwithstanding, some key persons include: 
+
+**Linc Gasking**
+
+Linc Gasking is a serial entrepreneur with many highly successful startups as well as being an award winning photographer, TedX speaker, and sought after community leader and mentor.
+
+**Edward Abraham, PhD**
+
+Edward is the founder and CEO of <a href="https://www.dragonfly.co.nz">Dragonfly Data Science</a>. He enjoys bringing evidence to the table, using information to make clear, principled decisions.
+
+Edward has a PhD from the University of Cambridge, where he studied theoretical physics in the cosmology group led by Professor Stephen Hawking. He worked as an oceanographer for 10 years, researching interactions between the physical and biological environment. Since starting Dragonfly, he has focussed on statistical analysis, with a focus on applications around decision making. 
+
+**Miles Thompson**
+
+Miles Thompson is a technical architect with more than twenty years experience as developer and technical lead especially in finance and machine learning, including acting as the CTO and then Senior Technical Architect of the leading independent financial research provider in NYC for many years. He holds a Bsc (Hons I) in Math and BA in Sociology.
+
+** Yvan Richard, PhD**
+
+Yvan is an ecologist who specialises in using statistical computing software  to solve complex problems.
+
+The techniques and methods he learned from work in ecology (including Bayesian analysis, and machine learning, spatial analysis, and capture-recapture models) translate perfectly into many other contexts, such as business and government. Yvan’s expertise with R is particularly sought after to display information simply and beautifully.
 
 

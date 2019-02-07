@@ -59,7 +59,9 @@ To <a href="https://en.wikiquote.org/wiki/Helmuth_von_Moltke_the_Elder">misquote
 
 We sincerely hope that your organisation will be interested in helping to classify a few claims per day.
 
-To express your interest please email us at <a href="mailto:info@factbenchmark.org">factbenchmark.org</a>.
+We currently have more than fifty key institutions and groups who have expressed interest in taking part in this project but please note that the alpha phase trial is a smaller preliminary project with a smaller group so please let us know separately if you are keen to take part.
+
+To express your interest please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
 
 <!-- Contact form approach - it works but yeah... naj
  --><!-- <form action="https://www.formingo.co/submit/84d4c621-2c55-4998-80cd-e11cce3ad064"
@@ -70,4 +72,3 @@ To express your interest please email us at <a href="mailto:info@factbenchmark.o
     <input type="submit" value="Contact">
 </form> -->
 
-We currently have more than fifty key institutions and groups who have expressed interest in taking part in this benchmark so get in quick if you want to take part. 
