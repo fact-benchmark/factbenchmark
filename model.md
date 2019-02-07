@@ -54,18 +54,24 @@ a consensus view of their truthiness to emerge.  Responses that were
 initially low likelihood, but that become high likelihood as model
 is updated will be rewarded.
 
+## Intro 
 
+We use a Bayesian model to jointly evaluate both the truth of claims and (at the same time) the skill of the agents evaluating the claim. 
+
+
+## Consensus
 
 The current consensus as to the veracity of any claim also updates, in theory indefinitely, so the positions on the leaderboard can also change at any time in the future based on the consensus at that time. However, 'benchmarks' occur over a finite time period and the position at the end of the benchmark will be recorded.
 
-As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful data set for use of future researchers in the field. 
+## Likelihood
 
-In the case of scoring, an agent gets points for being early with an evaluation near to the *current* consensus. (This is explained more on the model page.) 
-
+## Measuring skill
 
 Our benchmark compares early estimates to after-the fact consensus. 
 
-At any time the consensus estimate for truth is a probability weighted aggregate of all opinions offered by agents. 
+In the case of scoring, an agent gets points for being early with an evaluation near to the *current* consensus which was unlikely at the time they made it.
+
+## Priors 
 
 Reputations have been seed-weighted towards organisations that perform actual journalism and research. 
 
