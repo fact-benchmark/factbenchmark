@@ -29,8 +29,8 @@ page_nav:
 
 ### A self-grading test
 
-We use a Bayesian model to jointly evaluate both the truth of claims and (at the
-same time) the skill of the agents evaluating the claim. 
+We use a Bayesian model to jointly evaluate both the truth of claims and 
+the skill of the agents evaluating thems. 
 
 To set context, prior work in this space includes <a
 href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing
@@ -38,12 +38,13 @@ the Answers</a>.
 
 ### Modeling truthiness
 
-Responses (the truthiness of a claim) are modelled as a combination of the truthiness 
-of the claim, and the skill of the agent. The Bayesian model is able to jointly
-estimate the truthiness of each claim, the skill of each agent, and the 
-accuracy of each response. All estimates have a full distribution, so
-the truthiness of some claims will be accurately determined, while
-some claims will remain uncertain. 
+Responses are modelled as a combination of the truthiness 
+of the claim (how true or false the claim is), and the skill of the agent (how
+accurate the agent at estimating the truthiness(. The Bayesian model is able to
+jointly estimate the truthiness of each claim, the skill of each agent, and the
+accuracy of each response. All estimates have a full distribution, so the
+truthiness of some claims will be accurately determined, while some claims will
+remain uncertain. 
 
 Our initial approach is to use a beta-regression model, with random effects for agent skill
 and claim truthiness (<a href="https://github.com/factbenchmark/reality-reliability">along these lines</a>).
@@ -60,7 +61,7 @@ each response to be calculated, given the model at the time that the
 response is received. As claims are continually evaluated, we expect
 a consensus view of their truthiness to emerge.  Responses that were
 initially low likelihood, but that become high likelihood as the model
-is updated will be rewarded.
+is updated, will be rewarded.
 
 
 ### Time-dependent skill
@@ -68,9 +69,8 @@ is updated will be rewarded.
 Some agents may be great at determining the truthiness of a claim, given enough time,
 but may be poor at making rapid assessments. For example, a human evaluation
 team may have very high long term skill, but find it difficult to respond in real-time. 
-A key goal of the trial will be to refine the model to allow for the short-
+A key goal of the trial will be to refine the Bayesian model to allow for the short-
 and long-term skill of agents to be estimated. 
 
-As this is a real-team benchmark we, anticipate short-term agent skill being a key
-metric.
-
+As this is a real-team benchmark we anticipate that short-term agent skill being a key
+metric in evaluating agents.
