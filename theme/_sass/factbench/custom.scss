@@ -176,7 +176,6 @@ ul.quote {
 
   ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: -1px;
@@ -184,12 +183,19 @@ ul.quote {
     padding: 0;
     margin: 0;
 
+    flex-direction: column;
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+    }
+
     li {
       flex-grow: 1;
       flex-basis: auto;
-      margin: .25em 0;
-      padding: 0 4em;
-      text-align: center;
+     
+      text-align: left;
+      @media (min-width: $screen-sm-min) {
+         text-align: center;
+      }
       
       a {
         border-bottom: none;
@@ -204,17 +210,22 @@ ul.quote {
         content: none;
       }
 
-      &:first-child {
-        flex-grow: 0.8;
-        border-left: none;
-        text-align: left;
-        padding-left: 0;
+      @media (min-width: $screen-md-min) {
+        
+        &:first-child {
+            flex-grow: 0.8;
+            border-left: none;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        &:last-child {
+            flex-grow: 0.8;
+            text-align: right;
+            padding-right: 0;
+        }
       }
-      &:last-child {
-        flex-grow: 0.8;
-        text-align: right;
-        padding-right: 0;
-      }
+
     }
   }
 }

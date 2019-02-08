@@ -15,6 +15,9 @@ buttons:
       icon: arrow-right
       external_url: false
 
+# Micro navigation
+micro_nav: true
+
 # Author box
 author:
     title: About us 

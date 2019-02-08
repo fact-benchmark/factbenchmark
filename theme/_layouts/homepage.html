@@ -144,7 +144,9 @@
 				</div><!-- /.container -->
 			</div><!-- /.section -->
 		{% endif %}
-
+		{% if page.micro_nav == true %}
+			{% include micro-nav.html %}
+		{% endif %}
 		{% include site-footer.html %}
 	</body>
 </html>
