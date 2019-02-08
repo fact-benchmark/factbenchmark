@@ -59,7 +59,7 @@ To <a href="https://en.wikiquote.org/wiki/Helmuth_von_Moltke_the_Elder">misquote
  
 Fifty key institutions and groups have expressed interest in taking part in this project but please note that the alpha phase trial is a separate preliminary project involving a much smaller group. 
 
-To express your interest in taking part the alpha trial, please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
+To express your interest in taking part in the alpha trial, please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
 
 <!-- Contact form approach - it works but yeah... nah
  --><!-- <form action="https://www.formingo.co/submit/84d4c621-2c55-4998-80cd-e11cce3ad064"
