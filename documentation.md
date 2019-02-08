@@ -65,9 +65,11 @@ Finally, there is a read only end point that provides access to data in flattene
 
 ## Inviting feedback
 
-We are currently seeking feedback on many aspects of this project but especially the design of this API. 
+The overall goal of this roject to support and provide a resource to our stakeholders and member organisations. For that reason, we are obviously very keen to receive your feedback or thoughts on any aspect of this project.  This is is especially important in the case of the design of the API.
 
-Given our desire to support and facilitate research in this areas we would appreciate feedback from our member organisations on points major or minor. We are doing this via the hypothesis.is annotation tool. If you have thoughts about any aspects of this API please feel free to select any text on this page and use the tool to add your comments. Alternativelly feedback can be provided by email to: <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>
+We are using the excellent <a href="https://hypothes.is/">hypothes.is</a> tool to make this easy. If you have thoughts about anything on this page, simply select the text on this page and use the tooltip that pops up to add your comments. Registration with hypothesis is free and easy. 
+
+Alternatively, if you prefer, feedback is also welcomed by email to: <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>
 
 ## REST API
 
@@ -91,21 +93,19 @@ The ```claim_text``` is the definitive text that should be evaluated for truth o
 
 The ```timestamp``` is the time of attribution to the original claim (if any) 
 
-Example (with expansion of the evidence/attribution)
+Example (with expansion of the attributions annotation, per below)
 ```json
 {
 	"self": { "href": "claim/5355b6c6-b620-411b-9eb5-7e73f7146cbf"},
 	"claim_text": "Student arrested for shouting slogans against BJP in Tamil Nadu",
 	"claim_timestamp": "2018-09-04T04:29:00.000Z",
-	"evidence": {
-		"attributions": [
-			{ "source-url": "https://twitter.com/anindita-guha/status/1036924232595382273",
-	  		  "snapshot": { "hash": "3d8c26e642e3b" },
-	  		  "submitted_by": { "href": "agent/faktist16"},
-			  "created": "2019-01-01T01:23:00.000Z"
-	  		}
-		],
-	},
+	"attributions": [
+		{ "source-url": "https://twitter.com/anindita-guha/status/1036924232595382273",
+		  "snapshot": { "hash": "3d8c26e642e3b" },
+		  "submitted_by": { "href": "agent/faktist16"},
+	  "created": "2019-01-01T01:23:00.000Z"
+		}
+	],
 	"submitted_by": { "href": "agent/faktist16"},
 	"created": "2019-01-01T01:23:00.000Z"
 }
@@ -120,7 +120,7 @@ The first step is to decide whether a claim is check_worthy, then to evaluate it
 
 <img src="../theme/assets/images/claim_lifecycle.png" align="right" width="60%">
 
-It is expected, but not required, that a claim will tend to be evaluated for check-worthiness prior to being evaluated for truthiness, but this is not required. (In some cases the check-worthiness will be self evident from source.)
+It is expected that a claim will usually to be evaluated for check-worthiness prior to being evaluated for truthiness, but this is not required. Agents can respond with any or all three parts of the claim-response at any time.
 
 There are three parts of a claim response, any of which can be provided at any time.
 
@@ -132,47 +132,22 @@ A given user can respond multiple times to the same claim (and often will).
 
 Submitting a claim (or providing a truth_rating without a check_worthy section) is taken to be implcit acknowledgement that the claim is check_worthy (equivalent to ```"check_worthy": {"importance":1}```).
 
-#### Check-worthy
+#### check_worthy
 
-The simplest way to respond to a claim is to simply post ```"check_worthy": {"importance":1}``` - which is essentially the same as saying ```"check_worthy": true```.
+The simplest way to respond to a claim is to simply post ```"check_worthy": true``` which is equivalent to giving it a 'check-worthiness' of ```1```.
 
 For example:
 
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },
-	"check_worthy": { "importance": 1},
+	"check_worthy": true,
 	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
 
-The ```check_worthiness``` indicates the degree to which the claim is, in fact, "check_worthy". 
-
-Benchmarks will include claims with the highest, 'weighted, consensus importance' in a given time step. So it may also be taken to be an indication of the importance for the benchmark.
-
-Where a ```better-option``` is supplied within a decline-to-rate section, it indicates a related, more check_worthy claim.
-
-Where ```support``` is supplied it indicates content that supports the view put forward.
-
-For example:
-```json
-{ 
-	"ref": { "href": "claim/7dc0051f" },	
-	"check_worthy": {
-		"check_worthiness": 0.3,
-		"decline_to_rate": {
-			"reason": "not falsifiable - better options exist",
-			"support": { "hash": "3d8c26e642e3b" },
-			"ref": { "href": "claim/5d81f18d" }
-		}
-	},
-	"submitted_by": { "href": "agent/joef2016" },
-	"created": "2019-01-01T01:23:00.000Z"
-}
-```
-
-A response may simply indicate that the agent chooses not to rate this claim. In such cases the ```check_worthiness``` is implicitly assumed to be 0.
+Alternatively a response may simply indicate that the agent chooses not to rate this claim. In such cases the ```check_worthiness``` is implicitly assumed to be 0.
 
 ```json
 { 
@@ -187,13 +162,42 @@ A response may simply indicate that the agent chooses not to rate this claim. In
 } 
 ```
 
-#### Truth_rating 
+It is not required, but it is helpful to provide a ```reason``` when posting a decline-to-rate. For now this is free text content, but we may add an additional taxonomy field once we see what reasons are most common (if any).
 
-If an agent views a claim as check_worthy they may then assign a 'truth_rating' to it.  Apart from declining to rate, or annotating the claim there are two ways that a truth_rating can be indicated:
-* A boolean indicating whether the claim is 'true' or 'false'.
-* A boolean true, with a weighting between 0 and 1 indicating 'how true'
+It is also possible to provide a partial ```check_worthiness``` claim, such as in the case where the claim is check worthy but there is a better formulation of the claim.
 
-The ```weighting``` if any, should be interpreted as the degree to which the statement itself is true, not the confidence that the member has in their rating. 
+A ```better-option``` with a ```related``` claim can be supplied explicitly within a decline-to-rate section. For example:
+
+```json
+{ 
+	"ref": { "href": "claim/7dc0051f" },	
+	"check_worthy": {
+		"check_worthiness": 0.3,
+		"decline_to_rate": {
+			"reason": "not falsifiable - better options exist",
+			"related": { "href": "claim/5d81f18d" }
+		}
+	},
+	"submitted_by": { "href": "agent/joef2016" },
+	"created": "2019-01-01T01:23:00.000Z"
+}
+```
+
+Benchmarks will generally endeavor to include claims with the highest, expected value of 'check-worthiness'. In the case where the are many related claims, benchmarks will prefer to choose only one or two from the cluster having the highest rating for check worthiness.
+
+During the alpha phase trial, check worthy claims will be hand curated.
+
+#### truth_rating 
+
+If an agent views a claim as check_worthy they may choose to include a 'truth_rating' section in their response. 
+
+There are two primary ways that a truth_rating can be indicated:
+* A boolean indicating whether the claim is, simply 'true' or 'false'.
+* A truthiness value between 0 and 1 indicating 'how true'.
+
+It is worth bearing in mind that these two options exist within the context of the wider range of responses, such as declining to rate, or simply annotating the claim with arbitrary content. 
+
+The ```truthiness``` should be interpreted as the degree to which the statement itself is true, not the _confidence_ that the agent has in their rating. That is, a truthiness of ```0.6``` indicates 'partially true', not 'probably true'.
 
 For example:
 ```json
@@ -212,19 +216,18 @@ Or:
 { 
 	"ref": { "href": "claim/7dc0051f" },	
 	"truth_rating": {
-		"truthiness": 0.3,
-		"support": { "hash": "3d8c26e642e3b" }
+		"truthiness": 0.3
 	},
 	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
 
-#### Annotation
+#### Annotations
 
 Another form of response to a claim is an annotation.
 
-Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped, which can allow the agents to store their own data, and make their own interpretations. (In such cases the "FactBenchmark" service acts a little like a simple block chain - only without the block or the chain).
+Amongst other things, this provides a method for responding to a claim, and having this information independently recorded and timestamped. This can allow agents to store their own data, and make their own interpretations of that data. (In this case the "FactBenchmark" service acts a little like a simple block chain - only without the block or the chain).
 
 Arbitrary JSON can be posted in an annotation, for instance:
 
@@ -237,28 +240,48 @@ Arbitrary JSON can be posted in an annotation, for instance:
 } 
 ```
 
-This JSON will be stored (and, by default returned) as a content-hash, like this:
+Arbritary JSON will be stored (and, by default returned) as a content-hash, like this. If using the REST API it will be necessary to de-reference such content via the content resource. In such cases it may be preferable to use the GraphQL API which makes such de-refererencing easier.
 
 ```json
 { 
 	"ref": { "href": "claim/7dc0051f" },	
-	"annotation": { "hash": "a2f12df5" },
+	"annotations": [{ "hash": "a2f12df5" }],
 	"submitted_by": { "href": "agent/joef2016"},
 	"created": "2019-01-01T01:23:00.000Z"
 } 
 ```
 
-One use for the annotations field may be to indicate groups of related claims, but the schema and mechanism for this remains to be determined.
+Annotations can be placed under the following elements on each claim-response.
+- ```attribution``` (Generally but not always as support for check-worthiness)
+- ```evidence``` (Truthiness, Supporting)
+- ```not_supported``` (Truthiness, Not Supported)
+- ```annotation``` (Arbitrary annotations)
+
+For example to post an annotation indicating that a claim is not supported 
+
+```json
+{ 
+	"ref": { "href": "claim/7dc0051f" },	
+	"not_supported": {"text": "Officials from the state of Hawaii certified that the copy of the certificate they provided to President Obama was authentic:", 
+	    "url": "http://healthuser.hawaii.gov/health/vital-records/News_Release_Birth_Certificate_042711.pdf"},
+	"submitted_by": { "href": "agent/joef2016"},
+	"created": "2019-01-01T01:23:00.000Z"
+} 
+```
+
+At this point the schema for annotations is completely open - so long as they are valid json. It is also possible to post content to the content end point first and then provide a reference to that in the annotation. 
+
+Based on data and feedback received from our members we may look to provide guidance as to preferred schemas for annotations, in the interest of improved information sharing between agents.
 
 ### Benchmark and scoring
 
 A benchmark consists of a set of check_worthy claims chosen by some objective criteria. 
 
-One format for benchmarks is to choose one  check_worthy claim each hour and at each stage choose the claim with the highest, weighted importance not included in the benchmark already.
+One format for benchmarks is to choose one check_worthy claim each hour and at each stage choose the claim with the highest, weighted importance not included in the benchmark already.
 
-It is not necessary for a claim to be included in the benchmark at the time that ratings are provided, and in many cases it will be added to the benchmark retroactively.
+It is not necessary for a claim to be included in the benchmark for truth_rating responses to be received against it but obviously they don't count towards the benchmark score until the claim is added to the benchmark.
 
-Realtime calculations of agent points will also be made available under the benchmark end point.
+Generally claims within a response will be accessed via a *subscription* so that realtime notifications can be received. However in REST format a benchmark with its list of claims may look like this.
 
 ```json
 { 
@@ -284,13 +307,15 @@ Realtime calculations of agent points will also be made available under the benc
 
 ```
 
+Points awarded and attributable to agents because of responses given to claims within that benchmark will also be made available under the benchmark object, in the GraphQL API.
+
 ### Agent (Member)
 
 For transparency, (almost) every piece of data in the API is attached to an agent record, including, wherever possible, data created by factbenchmark.org itself, acting as an agent.
 
 ```json
 {
-	"username": "joef2016",
+	"name": "joef2016",
 	"url": "https://xyz.com",
 	"affiliation": "XYZ Inc",
 	"description": "XYZ Agent 2016",
@@ -335,7 +360,7 @@ The mime-type hash-html should be treated in a special way. When retrieving cont
 
 ## Cross cutting concerns 
 
-#### 24Hr Time Delay
+### 24Hr Time Delay
 
 Claim-responses, like all data, eventually become available to all members of the benchmark. However, to ensure independence of submissions (no peeking at other people's answers) claim-responses are not available to other agents, until after a 24hr time delay.
 
@@ -367,7 +392,7 @@ The server will allocate ids to objects on submission. REST responses (though no
 
 Wherever possible the design of this API is designed to allow for idempotent (or at least CRDT, Conflict-Free Replicated Data) data update models. That means that records, once submitted, cannot be updated, only appended to.
 
-### Hidden log
+### The "hidden" log
 
 As part of our guiding principles we aim to:
 - have attributions for all data
@@ -392,9 +417,9 @@ As a safety valve, however, _some_ facility for handling unexpected problems is 
 }
 ```
 
-Hidden log entries will only be accepted by the user with the corresponding ```submitted_by``` reference or by a special factbenchmark admin user (though it will be noted as such).
+Hidden log entries will only be accepted by the user with the corresponding ```submitted_by``` reference or by the factbenchmark agent itself.
 
-Special handling is used for hidden annotations and in other cases where it makes sense. Generally speaking however, once content is published to the API it is not revokable.
+Special handling will be used to remove 'hidden' annotations and in other cases where it makes sense to do so. Generally speaking, however, once content is published to the API it is not revokable and cannot be removed. 
 
 <!-- 
 ## Future directions 

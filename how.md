@@ -72,7 +72,7 @@ Our name for statements, rumors or quotes that are being evaluated for 'check-wo
 
 #### Check-worthiness
 
-The requirements for a claim to be check worthy, are that it is "falsifiable" and "of general interest" as outlined in more detail on the <a href="/documentation/">documentation</a> page.
+The requirements for a claim to be check worthy, are that it is "falsifiable" and "of general interest" as outlined in more detail on the <a href="/documentation/#claim">documentation</a> page.
 
 #### Truthiness
 
@@ -105,7 +105,7 @@ Any agent can submit a claim for review at any time. To ensure a sufficient numb
 Any time after a submission agents can provide annotations on claims. 
 
 Annotations are relatively schema-less and open to interpretation. That said there are three categories of annotation:
-- Annotations that provide support that the claim was made and of interest
+- Annotations that provide support that the claim is check-worthy
 - Annotations that provide support (or refutation) of the claim itself, and 
 - Other annotations. 
 

@@ -23,7 +23,7 @@ It is our hope that by furthering research in the area of this project we can id
 
 ## Who we are
 
-The team at FactBenchmark is a diverse group not all of whom are listed here. Notwithstanding that, some key persons include: 
+Some of the key individuals involved with this project include: 
 
 **Linc Gasking**
 
