@@ -147,7 +147,5 @@ That said it is not the intention of the benchmark to attempt to provide compreh
 
 Calculations for agent reputation are a key part of the system, explained in more detail on the <a href="/model/">model</a> page. The key point to understand is that the reputation is based on the difference between how unlikely the response was at the time it was made and how unlikely it is 'now'. 
 
-A response corresponding to the current consensus has maximum likelihood 'now', which helps reputation points, but to get the most points overall an agent wants to have made that response as early as possible. More specifically they want to have given their response at a time when the expected likelihood was low (given the consensus at the time). The precise calculation involves calculating the Wasserstein metric but the key equation is 
-reputation =  shift * tan(innovation / accuracy)
+A response corresponding to the current consensus has maximum likelihood 'now', but to get the most points overall an agent wants to have made that response as early as possible. More specifically, they want to have given their response at a time when the expected likelihood was low (given the consensus at the time).
 
-That is, the expected likelihood of a given response, given the current consensus estimate for 'truthiness' is compared with the expected likelihood of the given response at the time that the response was given. 
