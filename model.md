@@ -12,6 +12,8 @@ title: Modeling "truthiness"
 description: >
     Our approach to measuring the truthiness (and check-worthiness) of each claim is a bayesian model which simultaneously rates the 'accuracy' of agents as well as of the claims they are evaluating. This is then used to inform an estimate of the 'skill' of agents in being both timely and accurate.
 
+
+
 # Page navigation
 page_nav:
     prev:

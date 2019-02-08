@@ -8,12 +8,14 @@ doks:
             text: Realtime Fact Benchmark
             image: false
         nav:
-            - item_name: Intro
+            - item_name: How it works
               item_url: '/how'
             - item_name: API Docs
               item_url: '/documentation'
             - item_name: Manifesto
               item_url: '/manifesto'
+            - item_name: About us
+              item_url: '/about'              
     footer:
         nav:
             - item_name: How it works

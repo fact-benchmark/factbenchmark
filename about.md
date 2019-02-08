@@ -29,15 +29,21 @@ The team at FactBenchmark is a diverse group not all of whom are listed here. No
 
 Linc is a successful entrepreneur and award winning photographer, TEDx speaker and community builder. He initiated the <a href="http://www.opensourceopensociety.com/">Open Source Open Society conference</a> and was <a href="https://futureofstorytelling.org/speaker/linc-gasking">co-founding CEO</a> of hologram company 8i.
 
+
+
 **Edward Abraham, PhD**
 
 Edward is the founder and CEO of <a href="https://www.dragonfly.co.nz">Dragonfly Data Science</a>. He enjoys bringing evidence to the table, using information to make clear, principled decisions.
 
 Edward has a PhD from the University of Cambridge, where he studied theoretical physics in the cosmology group led by Professor Stephen Hawking. He worked as an oceanographer for 10 years, researching interactions between the physical and biological environment. Since starting Dragonfly, he has focussed on statistical analysis, with a focus on applications around decision making. 
 
+
+
 **Miles Thompson**
 
 Miles Thompson is a technical architect with more than twenty years experience as developer and technical lead, especially in finance and machine learning. He was CTO and then Senior Technical Architect of the leading independent financial research provider in NYC for many years. He holds a Bsc (Hons I) in Math and BA in Sociology.
+
+
 
 **Yvan Richard, PhD**
 
