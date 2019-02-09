@@ -1,5 +1,5 @@
 
-var tooltip_message = "We are currently seeking feedback using hypothes.is. Highlight any text and click 'annotate' to add yours.";
+var tooltip_message = "Highlight any text and click 'annotate' to add feedback. Please and thankyou!";
 var tooltip_selector = ".intro-content p, .content p, .content li";
 var total_show_count = 0;
 var max_show_count = 50;
