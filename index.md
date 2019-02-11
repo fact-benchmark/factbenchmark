@@ -34,9 +34,9 @@ features:
       icon-class: fas fa-balance-scale
       excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
       url: 'model' 
-    - title: Realtime benchmark
+    - title: Earn reputation 
       icon-class: mi mi-Settings fact-spinner
-      excerpt: Join our alpha benchmark trial.
+      excerpt: We give you a publishable benchmark for your system's ability to make early estimates in line with consensus.
       url: 'trial' 
 
    
@@ -44,6 +44,21 @@ features:
 
 # Grid navigation
 grid_navigation:
+
+    - title: How it works
+      excerpt: What the Fact Benchmark is all about
+      cta: Read more
+      url: 'how' 
+
+    - title: Alpha trial 
+      excerpt: Be part of our alpha trial
+      cta: Read more
+      url: 'trial' 
+
+    - title: Modeling truthiness
+      excerpt: Our practical, Bayesian approach
+      cta: Read more
+      url: 'model'  
 
     - title: Documentation 
       excerpt: API documentation (narrative form)
@@ -80,18 +95,4 @@ live_navigation:
       cta: Read more
       url: 'roadmap' 
 -->
-<!-- 
-- title: How it works
-  excerpt: What the Realtime Fact Benchmark is and how it works
-  cta: Read more
-  url: 'how' 
 
-- title: Alpha trial 
-  excerpt: Be part of our alpha trial
-  cta: Read more
-  url: 'trial' 
-
-- title: Modeling truthiness
-  excerpt: Our practical, Bayesian approach
-  cta: Read more
-  url: 'model'  -->

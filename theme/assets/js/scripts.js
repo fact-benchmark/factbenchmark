@@ -164,6 +164,16 @@
 		} );
 	} );
 
+	alert("co");
+
+	$('a').each(function() {
+		if ($(this).prop('href') == window.location.href) {
+		  $(this).addClass('current');
+		  alert($(this));
+		}
+	});
+
+
 	// Offcanvas
 	$( '.offcanvas-toggle' ).on( 'click', function() {
 		$( 'body' ).toggleClass( 'offcanvas-expanded' );

@@ -39,7 +39,6 @@
       }
     }
     &:hover {
-      cursor: pointer;
       .features-icons-icon {
         i {
           color: green;
@@ -226,6 +225,41 @@ ul.quote {
         }
       }
 
+    }
+  }
+}
+
+
+.site-header {
+
+  .home_small {
+    font-size: 20px;
+    padding-right: 0px;
+    padding-left: 0.1em;
+  }
+
+  .site-header__logo {
+    line-height: 2em;
+  }
+
+  .top_nav  {
+    a {
+      
+      line-height: 25px;
+    }
+   
+    a.current:before {
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+      content: '';
+      display: inline-block;
+      height: 0.45em;
+      left: .6em;
+      position: relative;
+      top: 2.15em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 0.45em;
     }
   }
 }

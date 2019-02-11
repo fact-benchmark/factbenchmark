@@ -4,6 +4,15 @@ var tooltip_selector = ".intro-content p, .content p, .content li";
 var total_show_count = 0;
 var max_show_count = 50;
 
+function normalizedUrl(url_str) {
+    var url = document.createElement('a');
+    url.href = url_str;
+    // fix for IE bug
+    url.pathname = url.pathname.replace(/(^\/?)/,"/");
+    url.pathname = url.pathname.replace(/\/$/, "");
+    return url;
+};
+   
 ( function( $, win) {
 	'use strict';
     
@@ -14,6 +23,16 @@ var max_show_count = 50;
         target  = false,
         tooltip = false,
         tip;
+
+
+    var current_url = normalizedUrl(window.location.href);
+    $('.site-header a').each(function() {
+        var target_url = normalizedUrl($(this).prop('href'));
+        if (target_url.pathname === current_url.pathname) {
+           $(this).addClass('current');
+           console.log("current = " + target_url.pathname);
+        }
+    });
 
     targets.on('mouseover', function() {
     	
@@ -106,5 +125,7 @@ var max_show_count = 50;
 
         target.on('mouseout', removeTooltip);
         tooltip.on('click', removeTooltip);
+
+
     });
 }(jQuery, window));

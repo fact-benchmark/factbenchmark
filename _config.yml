@@ -10,7 +10,11 @@ doks:
         nav:
             - item_name: How it works
               item_url: '/how'
-            - item_name: API Docs
+            - item_name: Model
+              item_url: '/model' 
+            - item_name: Join the trial 
+              item_url: '/trial' 
+            - item_name: Documentation
               item_url: '/documentation'
             - item_name: Manifesto
               item_url: '/manifesto'
@@ -28,13 +32,15 @@ doks:
               item_url: '/documentation'
             - item_name: Manifesto
               item_url: '/manifesto'
+            - item_name: About us
+              item_url: '/about'    
         content:
             logo:
                 text: 
                 image: true
             copyright: "Fact Benchmark"
     google_analytics:
-        tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
+        tracking_code: "UA-134277708-1" # Add your Google Analytics tracking code to activate Google Analytics
     comments:
         disqus_forum_shortname: # Add your disqus forum shortname to activate comments
 
