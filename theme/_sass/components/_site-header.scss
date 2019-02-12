@@ -36,7 +36,6 @@
 .site-header__nav {
 	@include list-horizontal;
 	@include clearfix;
-	position: fixed;
 	// float: left;
 	// margin-bottom: 0;
 
