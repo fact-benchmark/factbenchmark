@@ -69,13 +69,21 @@
   }
 
   .hero-subheader__sub_title {
-    margin-bottom: 1.875rem;
+    
+  }
+  
+  .hero-subheader__sub_title {
+    font-size: 2.7rem;
+    line-height: 1.5;
+    font-family: serif;
+    margin-bottom: 1.2rem;
   }
 
-  .hero-subheader__desc, 
-  .hero-subheader__sub_title {
+  .hero-subheader__desc {
     font-size: 1.6rem;
     line-height: 1.7;
+    margin-bottom: 1.875rem;
+
   }
 
   .hero-subheader__author {
@@ -85,7 +93,9 @@
     .btn {
       margin-bottom: 0;
     }
+
   }
+
 
   .btn {
     font-size: 1.5rem;
@@ -109,7 +119,7 @@
 
 .author {
   .align-container {
-    padding-top: 2.4rem;
+    padding-top: 1.2rem;
     font-size: 1.4rem;
   }
   .hero-subheader__author-title {

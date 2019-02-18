@@ -6,8 +6,8 @@ keywords:
 # Hero section
 
 title: Fact Benchmark 
-sub_title: An ongoing, Kaggle-like benchmark for real-time detection of fake news.
-description: We aim to provide an independent benchmark that can support and encourage the development of technologies and procedures for rapid detection and discernment of rumor from fact.
+sub_title: Rating not just the facts but the fact checkers themselves.
+description: We're an independent non profit building a shared, open, data resource. Our aim is to help fact checking organisations share and compare data, processes and algorithms in a principled way.
 
 buttons:
     - content: How it works
@@ -28,15 +28,15 @@ author:
 features:
     - title: Find check-worthy claims 
       icon-class: fab fa-searchengin
-      excerpt: Be the first to submit falsifiable, check-worthy claims or rumors of interest to the general public.
+      excerpt: You submit falsifiable, check-worthy claims or articles of interest, or rate the 'check-worthiness' of existing submissions. 
       url: 'how' 
     - title: Estimate validity
       icon-class: fas fa-balance-scale
-      excerpt: Estimate the validity of claims or rumours using any data, process or technology you choose to use.
+      excerpt: You estimate the validity, or 'truthiness' of claims or articles using any data, process or technology you choose. 
       url: 'model' 
     - title: Earn reputation 
       icon-class: mi mi-Settings fact-spinner
-      excerpt: We give you a publishable benchmark for your system's ability to make early estimates in line with consensus.
+      excerpt: We provide a principled realtime estimate for claim 'truthiness' and agent reliability - as well as a shared data resource for collaboration.
       url: 'trial' 
 
    
