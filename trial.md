@@ -6,7 +6,7 @@ comments: false
 
 # Hero section
 title: Alpha phase trial
-description: We are looking for a limited number of interested parties to take part in our alpha phase trial - which will take place in March 2019.
+description: We are looking for a limited number of interested parties to take part in our phase I trial.
 
 # Micro navigation
 micro_nav: true
@@ -21,21 +21,34 @@ page_nav:
         url: '/documentation'
 ---
 
-# Alpha phase trial
+# Phase I trial
 
-We are looking for ten to twenty institutions to take part in our alpha phase trial in March 2019.
+We are looking for a limited number of institutions to collaborate with us for our phase I trial in coming weeks.
 
-We will ensure there are between five and ten check-worthy claims each day.
+## Expressions of interest 
+ 
+We were delighted excited to receive expressions of interest from more than fifty key institutions and groups.
 
-Agents will be notified whenever a claim is ready for evaluation. 
+However, before we open up the API for wider collaboration we'd like work with smaller number of partners on a preliminary project, to refine our data model and iron out any bugs (conceptual or technical)
 
-For this first trial, we'll concentrate on claims in English, of broad interest to a global/English speaking audience.
+If you would like to be involved please leave your contact information below. Please include the username your organisation signed up with originally, if you have it.
+
+{% include signup_form.html %}
+
+
+## Phase I Trial
+
+For the first trial, we will concentrate on claims in English, of broad interest to a global/English speaking audience.
+
+Current intention is that the trial would be about four weeks long. During this time factbenchmark would ensure there are between five and ten check-worthy claims each day.
+
+Agents will be notified whenever a claim is ready for evaluation by email or other method yet to be agreed.
 
 ## Data and evaluations
 
 We will end up with approximately two hundred claims or roughly two thousand data points. 
 
-As with all our data this will be made available for use, but should be considered only a test run and not yet of 'publishable' quality. We aim to generate ten times this much data in an average month going forward after the model has been more fully calibrated.
+As with all data, this will be made available for use, but should be considered only a test run and not yet of 'publishable' quality. We aim to generate ten times this much data in an average month going forward, after the model has been more fully calibrated.
 
 During the trial we will make available reports showing how the leaderboard will work, and otherwise examining and visualizing the data  but these will not be 'real time' nor should they be considered a reference 'of publishable quality' during this alpha phase. 
 
@@ -49,24 +62,8 @@ Understanding that agents may need time to build an API client, we can make it p
 
 The primary goal of the overall project is to provide a platform that is of use to our stakeholders.
 
-The primary goal during the alpha phase trial is to collect data which will enable us to refine our approach and our model so as to better fulfil that function. 
+However, the primary goal during the Phase I trial is to collect data for Factbenchmark which will enable us to refine our approach and our model so as to better fulfil that function. 
 
 Currently our model, being deliberately 'naive', requires a lot of time to compute. Updates to the leaderboard/s will only be made available periodically in an offline, batch fashion. However, it is hoped that looking at data will also help us refine the way that we compute the model so as to align it's performance characteristics for online use.
 
 To <a href="https://en.wikiquote.org/wiki/Helmuth_von_Moltke_the_Elder">misquote</a> Helmuth von Moltke, "no theoretical model long survives contact with real world data". In that context, we see this alpha phase as a sort of 'sea trials' for our approach, during which we will collect enough data to refine the approach and refine our model.
-
-## Expressions of interest 
- 
-Fifty key institutions and groups have expressed interest in taking part in this project but please note that the alpha phase trial is a separate preliminary project involving a much smaller group. 
-
-To express your interest in taking part in the alpha trial, please email us at <a href="mailto:info@factbenchmark.org">info@factbenchmark.org</a>.
-
-<!-- Contact form approach - it works but yeah... nah
- --><!-- <form action="https://www.formingo.co/submit/84d4c621-2c55-4998-80cd-e11cce3ad064"
-      method="POST">
-    <input type="text" name="full_name">
-    <input type="email" name="__replyto">
-
-    <input type="submit" value="Contact">
-</form> -->
-

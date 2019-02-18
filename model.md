@@ -20,7 +20,7 @@ page_nav:
         content: How it works
         url: '/how'
     next:
-        content: Join our alpha trial
+        content: Join our trial
         url: '/trial'
 ---
 

@@ -16,6 +16,10 @@ page_nav:
     prev:
         content: Documentation
         url: '/documentation' 
+    next:
+        content: About us
+        url: '/about' 
+
 
 ---
 

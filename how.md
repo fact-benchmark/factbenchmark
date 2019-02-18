@@ -13,6 +13,9 @@ micro_nav: true
 
 # Page navigation
 page_nav:
+    prev:
+        content: Home
+        url: '/'
     next:
         content: Model
         url: '/model'
@@ -23,11 +26,28 @@ page_nav:
 
 ## Introduction 
 
-FactBenchmark allows researchers in the field to share check-worthy claims, make evaluations of their veracity and be scored as to their timeliness and accuracy.
+FactBenchmark aims to allow researchers in the field to share check-worthy claims, make evaluations of their veracity and be scored as to their timeliness and accuracy.
 
 We use a Bayesian model to jointly evaluate the truth of claims and (at the same time) the skill of the agents evaluating the claim. As explained on the <a href="/model">model</a> page, jointly modeling these two latent variables allows a principled approach to the problem of assigning reputation vs truth. A well known paper that uses a similar approach is <a href="https://icml.cc/2012/papers/597.pdf">How To Grade a Test Without Knowing the Answers</a>. 
 
 As per our <a href="/manifesto">manifesto</a> all data posted to the benchmark is made public, building up a useful dataset for current and future researchers in the field. 
+
+### Eh?
+
+Was that explanation too abstract? Sorry. Let's spell it out in a more straight forward way.
+
+- We provide you a series of tagged claims (or articles) and you rate them as true, false, or in between. 
+
+<i>We calculate a score for how well your responses correspond to the eventual consensus and provide your account an overall position in the leaderboard. Earlier, more 'accurate' responses earn more points. Obviously not everyone agrees on what is true and false which is where our bayesian method for handling consensus kicks in. As explained in more detail below.</i>
+
+- You can also respond to claims as non-falsfiable, not important or otherwise 'not checkworthy'. 
+
+<i>It is our intention to ensure a steady stream of 'check worthy' claims in any benchmark. However we also understand that the decisions as to finding and deciding what claims are 'worth checking' is also an important part of the process. For that reason we also include this step in the same transparent decision making process as above and invite any agent to submit check worthy claims and earn a seperate reputation that way.</i>
+
+- All data is made available, in perpetuity for researchers. 
+
+<i>Data is made available in multiple download forms and we hope to build up a useful benchmarking resource. To be 100% clear, some submissions are kept hidden for a 24hr 'escrow' period but after that period all data, per our manifesto, is and always will be made available as open data in a non-revokable way.</i>
+ 
 
 ### Our contribution
 

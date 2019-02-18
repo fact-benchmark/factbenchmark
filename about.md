@@ -11,6 +11,13 @@ micro_nav: true
 title: About us
 description: FactBenchmark is an organisation spun out of <b>W4GL</b> which itself is an organisation doing research into resilient coordination protocols in distributed, unreliable environments. We are currently taking advice as to the best way to legally incorporate FactBenchmark as an independent, non profit, foundation in order to support this project.
 
+# Page navigation
+page_nav:
+    prev:
+        content: Manifesto
+        url: '/manifesto'
+
+
 ---
 
 ## Our motivations 

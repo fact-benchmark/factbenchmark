@@ -7,7 +7,7 @@ keywords:
 
 title: Fact Benchmark 
 sub_title: Rating not just the facts but the fact checkers themselves.
-description: We're an independent non profit building a shared, open, data resource. Our aim is to help fact checking organisations share and compare data, processes and algorithms in a principled way.
+description: We're building a shared, open data resource of tagged data in the 'fake news' space. Our aim is to help fact checking organisations share and compare tagged data and evaluate their  processes and algorithms against our benchmarks.
 
 buttons:
     - content: How it works
@@ -36,7 +36,7 @@ features:
       url: 'model' 
     - title: Earn reputation 
       icon-class: mi mi-Settings fact-spinner
-      excerpt: We provide a principled realtime estimate for claim 'truthiness' and agent reliability - as well as a shared data resource for collaboration.
+      excerpt: We provide a principled realtime estimate for claim 'truthiness' and agent reliability. *Also, a shared, open, structured, data resource.
       url: 'trial' 
 
    
@@ -50,8 +50,8 @@ grid_navigation:
       cta: Read more
       url: 'how' 
 
-    - title: Alpha trial 
-      excerpt: Be part of our alpha trial
+    - title: Trial 
+      excerpt: Be part of our phase I trial
       cta: Read more
       url: 'trial' 
 
