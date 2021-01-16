@@ -25,9 +25,13 @@ page_nav:
 
 We are looking for a limited number of institutions to collaborate with us for our phase I trial in coming weeks.
 
-## Expressions of interest 
+## Expressions of interest (on hold)
  
-We were delighted excited to receive expressions of interest from more than fifty key institutions and groups.
+Unfortunately, while we experienced good general interest from a number of organizations when this was first published we did not receive sufficient concrete expressions of interest to run the Phase I Trial at that time.
+
+That said, should this situation change we remain open and ready to run a Phase I trial with interested parties. With that in mind we are leaving this content up for now. 
+
+--
 
 However, before we open up the API for wider collaboration we'd like work with smaller number of partners on a preliminary project, to refine our data model and iron out any bugs (conceptual or technical)
 
